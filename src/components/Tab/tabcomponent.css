@@ -1,0 +1,46 @@
+.tabcomponent-container{
+    margin-top: 15px;
+    width: 100%;
+    min-height: 450px;
+    height: fit-content;
+    margin-bottom: 35px;
+    border:1px solid black;
+    background-color: #1C2333;
+    overflow: hidden;
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+}
+.tabs label{
+    display: flex;
+    flex:1;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-family: 'IBM Plex Sans';
+    border:2px solid black;
+    font-weight: 500;
+    border-bottom: 6px solid #3756F4;
+}
+.tabs label:hover{
+    background-color: #3756F4;
+    color:white;
+}
+.not-active{
+    color:#3756F4;
+    background-color: #1C2333;
+}
+.activeTab{
+    background-color: #3756F4;
+    color:white;
+}
+.tab-container{
+    width: 100%;
+    height: 100%;
+    background-color: #1C2333;
+    padding:15px;
+    padding-top: 0px;
+    color:white;
+}

@@ -1,0 +1,8 @@
+.btn-outline{
+    border-radius: 30px;
+    border:2px solid black;
+    background-color: transparent;
+    margin-right: 25px;
+    font-family: 'Inter';
+    cursor: pointer;
+}

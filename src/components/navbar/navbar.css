@@ -1,0 +1,33 @@
+.navbar-container{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.navbar-container h2{
+    color: white;
+}
+.navbar-container ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.navbar-container ul li {
+    margin-left: 45px;
+    margin-right: 45px;
+    list-style: none;
+    text-decoration:none;
+    color:white;
+    
+}
+.navbar-container ul li:hover{
+    color:#8826D1;
+}

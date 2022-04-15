@@ -1,0 +1,12 @@
+.card-text h3{
+    font-weight: 500;
+    margin: 0px;
+    line-height: 28px;
+}
+.card-text p{
+    margin:0px;
+    margin-top: 13px;
+    font-size: 15px;
+    color:#767678;
+    line-height: 20px;
+}

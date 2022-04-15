@@ -1,0 +1,20 @@
+.outer-circle{
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #BD0F71 , #8826D1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner-circle{
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-photo{
+    width:170px;
+    height:auto;
+}

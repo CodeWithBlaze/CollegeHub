@@ -1,0 +1,32 @@
+.tutorial-container{
+    margin-top:90px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.editor-container{
+    width: 50%;
+    height:inherit;
+    padding: 30px;
+    padding-top: 0px;
+}
+.video-container{
+    width: 50%;
+    padding-right: 30px;
+    
+}
+.board-button{
+    position:fixed;
+    bottom:30px;
+    left:0px;
+    width: 150px;
+    height:40px;
+    font-family: 'IBM Plex Sans';
+    background-color: #3756F4;
+    color:white;
+    border:none;
+    font-weight: 500;
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+}

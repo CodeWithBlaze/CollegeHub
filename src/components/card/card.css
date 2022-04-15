@@ -1,0 +1,13 @@
+.border-container{
+    width: fit-content;
+    background-image: linear-gradient(to right, #BD0F71 , #8826D1);
+    padding: 5px;
+    border-radius: 5px;
+    margin:15px;
+}
+.card{
+    background-color: #171717;
+    color:white;
+    border-radius: 5px;
+    overflow: hidden;
+}

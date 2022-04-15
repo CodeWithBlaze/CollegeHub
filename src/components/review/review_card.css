@@ -1,0 +1,19 @@
+.review-client-info{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+
+}
+.review-client-info label{
+    padding-left: 25px;
+    font-size: 18px;
+}
+.review-client-review{
+    width: 100%;
+    height:120px;
+    overflow: hidden;
+    font-size: 13.5px;
+    line-height: 18px;
+    color:#767678;
+    
+}
