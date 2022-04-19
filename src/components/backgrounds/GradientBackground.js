@@ -1,7 +1,7 @@
 import './gradient_background.css';
-const GradientBackground = ({children}) => {
+const GradientBackground = ({children,customStyle}) => {
     return ( 
-        <div className="gradient-background-container">
+        <div className="gradient-background-container" style={customStyle}>
             {children}
         </div>
      );

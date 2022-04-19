@@ -1,0 +1,41 @@
+.course-card-main{
+    width:350px;
+    height:460px;
+    background-color:#161616;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans';
+    color:white;
+    border:2px solid black;
+    
+    
+}
+.course-card-details{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+.course-card-details img{
+    width: 100%;
+    max-height: 180px;
+    overflow: hidden;
+    object-fit:cover;
+    
+
+}
+.course-card-details div{
+    padding-left: 30px;
+    padding-right: 15px;
+}
+.course-card-details div p{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color:#767678;
+}
+.course-card-details div h3{
+    color:white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}

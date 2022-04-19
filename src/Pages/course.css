@@ -1,0 +1,17 @@
+.path-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: 'row';
+    justify-content:flex-start;
+    
+}
+.course-card-container{
+    padding-top: 30px;
+    display: flex;
+    justify-content:flex-start;
+}
+.course-tag-container{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+}

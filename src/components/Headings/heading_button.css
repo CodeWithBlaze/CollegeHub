@@ -1,0 +1,10 @@
+.heading_button_container{
+    color:white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.heading_button_container h1{
+    font-weight: 500;
+    margin-right:30px;
+}

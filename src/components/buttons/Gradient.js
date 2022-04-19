@@ -1,11 +1,12 @@
 import './gradient.css';
-const GradientButton = ({label,width,height,fontsize,gradient_color1,gradient_color2,color}) => {
+const GradientButton = ({label,width,height,fontsize,color,borderRadius=30}) => {
     return ( 
         <button className="btn-solid" style={{
             width,
             height,
             fontSize:fontsize,
             color,
+            borderRadius
         }}>{label}</button>
      );
 }

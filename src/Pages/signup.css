@@ -1,0 +1,43 @@
+.signup-container{
+    width: 100%;
+    min-height:78vh;
+    height: fit-content;
+    background-image: linear-gradient(radial,#323338,#212226);
+    padding-bottom: 20px;
+    
+}
+.signup-container{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.signup-text-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.signup-text-container h2{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 85px;
+    margin-left: 100px;
+    color:white;
+    
+}
+.signup-text-container img{
+    margin-left: 100px;
+}
+.signup-form{
+    width: 50%;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-text-signup{
+    font-size:30px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-left: 15px;
+}

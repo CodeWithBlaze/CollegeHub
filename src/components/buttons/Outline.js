@@ -1,7 +1,7 @@
 import './outline.css';
 const OutlineButton = ({label,width,height,fontsize,color}) => {
     return ( 
-        <button className="btn-outline" style={{width:width,height:height,fontSize:fontsize,borderColor:color,color:color}}>
+        <button className="btn-outline" style={{width,height,fontSize:fontsize,borderColor:color,color}}>
             {label}
         </button>
      );
