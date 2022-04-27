@@ -1,0 +1,20 @@
+.topic-card-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-left: 45px;
+    padding-right: 45px;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#1C2333;
+    border: 1px solid #3756F4;
+    color:white;
+    box-shadow: 0px 0px 10px #3756F4;
+    margin-bottom: 15px;
+}
+.topic-card-container h4{
+    font-weight: 500;   
+}
+.topic-card-container label{
+    cursor: pointer;
+}

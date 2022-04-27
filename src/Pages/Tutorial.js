@@ -17,7 +17,6 @@ const TutorialPage = () => {
             <section className='video-container'>
             <iframe width="100%" height="390" style={{border:'2px solid black'}} src="https://www.youtube.com/embed/r_MbozD32eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
             <TabComponent/>
-                
             </section>
         </div>
         </> 

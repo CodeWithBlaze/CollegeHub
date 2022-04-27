@@ -23,7 +23,6 @@ const Course = () => {
                 label="Web Developement" 
                 image="https://content.techgig.com/photo/84794342/what-are-the-key-responsibilities-of-web-developers.jpg?49831"/>
             </div>
-            
             </GradientBackground>
         </section>
         <section>
@@ -49,9 +48,9 @@ const Course = () => {
             <GradientBackground customStyle={{paddingLeft:100}}>
                 <Heading_Button text="Tags" label="See All"/>
                 <div className='course-tag-container'>
-                <TagCard width={150} height={40} label="Programming"/>
-                <TagCard width={150} height={40} label="Dev OPS"/>
-                <TagCard width={150} height={40} label="Malware Developement"/>
+                <TagCard  height={60} label="Programming"/>
+                <TagCard  height={60} label="Dev OPS"/>
+                <TagCard height={60} label="Malware Developement"/>
                 </div>
                
                 

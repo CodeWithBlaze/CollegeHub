@@ -23,7 +23,7 @@ const Home = () => {
         <div className="container">
             <div className="title-container">
                 <h1>Get Entire College Study For Free</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
                 <GradientButton label="Get Started For Free" width={260} height={50} fontsize={15} color="white"/>
             </div>
             <div className="video-container">

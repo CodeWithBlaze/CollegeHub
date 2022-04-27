@@ -14,8 +14,8 @@ const Navbar = ({bg_color='black'}) => {
                 <Link to="/contact" style={{textDecoration:'none'}}><li>Contact</li></Link>
             </ul>
             <span>
-                 <OutlineButton label="Log in" width={130} height={40} color="white" fontsize={15}/>
-                 <GradientButton label="Sign in" width={130} height={40} color="white" fontsize={15}/>
+                 <Link style={{textDecoration:'none'}} to="/signup"><OutlineButton label="Log in" width={130} height={40} color="white" fontsize={15}/></Link>
+                 <Link style={{textDecoration:'none'}} to="/signin"><GradientButton label="Sign up" width={130} height={40} color="white" fontsize={15}/></Link>
             </span>
            
         </div>

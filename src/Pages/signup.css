@@ -41,3 +41,21 @@
     line-height: 50px;
     margin-left: 15px;
 }
+.form-input-container{
+    /* background-color: red; */
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.signup-form-button-container{
+    margin-left: 15px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-family: "IBM Plex Sans";
+    font-weight: 500;
+}
