@@ -5,8 +5,9 @@ import Signin from '../components/card/Signin';
 import { useState } from 'react';
 
 
-const Signup = ({showSignIn=false}) => {
-    const [isSignUpPage,setIsSignUpPage] = useState(showSignIn);
+const Signup = ({showSignUp=true}) => {
+    const [showSignUpPage,setShowSignUpPage] = useState(showSignUp);
+    console.log(showSignUpPage);
     return ( 
         <div className="signup-container">
             <Navbar bg_color='transparent'/>
@@ -16,8 +17,8 @@ const Signup = ({showSignIn=false}) => {
                     <img src={require('../asset/education.png')}/>
                 </div>
                 <div className='signup-form'>
-                    {isSignUpPage && <SignUp  setIsSignUpPage={setIsSignUpPage}/>}
-                    {!isSignUpPage && <Signin  setIsSignUpPage={setIsSignUpPage}/>}
+                    {showSignUpPage && <SignUp  setShowSignUpPage={setShowSignUpPage}/>}
+                    {!showSignUpPage && <Signin  setShowSignUpPage={setShowSignUpPage}/>}
                 </div>
 
             </div>

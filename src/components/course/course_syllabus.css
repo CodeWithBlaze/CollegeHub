@@ -1,0 +1,24 @@
+.course-syllabus-container{
+    padding: 60px;
+    color:white;
+    
+}
+.course-syllabus-container h1{
+    font-size: 35px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 60px;
+}
+.load-more-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.course-curriculum-load-more{
+    flex-grow: 1;
+    text-align: center;
+    font-family:'IBM Plex Sans';
+    color:#A7A7A7;
+    font-weight: 500;
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.course-curriculum-sub-container{
+    padding:30px;
+    color:white;
+}
+.course-curriculum-sub-container h1{
+    font-size: 50px;
+}
+.course-learn-outcome-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: 'IBM Plex Sans';
+}
+.course-learning{
+    width: 50%;
+    height:fit-content;
+    /* background-color: red; */
+    padding: 30px;
+    border-right: 2px solid #787777;
+}
+.course-learning h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.course-outcome{
+    width:50%;
+    flex-grow: 1;
+    /* background-color: blue; */
+    padding: 30px;
+    padding-left: 100px;
+}
+.course-outcome h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.course-curriculum-list{
+    margin-top: 50px;
+    text-decoration: none;
+    list-style: none;
+}
+.course-curriculum-list li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color:#767678;
+}
+.course-curriculum-btn-container{
+    margin-top: 100px;
+}

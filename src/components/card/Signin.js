@@ -13,7 +13,7 @@ const input_box_style = {
     fontSize:16
 }
 
-const Signin = ({setIsSignUpPage}) => {
+const Signin = ({setShowSignUpPage}) => {
     const [password,setPassword] = useState("");
     const [email,setEmail] = useState("");
     return ( 
@@ -48,7 +48,7 @@ const Signin = ({setIsSignUpPage}) => {
                             borderRadius={3}
                             
                             />
-                            <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setIsSignUpPage(true)}>
+                            <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setShowSignUpPage(true)}>
                                 Create a new Account.<label style={{color:'#8826D1'}}> Sign up</label>
                             </LinkText>
                         </div>

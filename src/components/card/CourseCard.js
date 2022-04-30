@@ -10,8 +10,7 @@ const CourseCard = ({image,heading,description,customStyle}) => {
                 <div>
                     <h3>{heading}</h3>
                     <p>{description}</p>
-                    <Link to="/"><p style={{color:'#8826D1'}}>Show Syllabus</p></Link>
-                    <GradientButton width="100%" height={50} fontsize={15} label="Enroll Now" color="white" borderRadius={5}/>
+                    <Link to="/coursedetails" style={{textDecoration:'none'}}><GradientButton width="100%" height={50} fontsize={15} label="Enroll Now" color="white" borderRadius={5}/></Link>
                 </div>
                 
             </div>
