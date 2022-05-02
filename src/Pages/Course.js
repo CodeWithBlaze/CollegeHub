@@ -7,6 +7,13 @@ import CourseCard from '../components/card/CourseCard';
 import TagCard from '../components/tags/TagCard';
 import { Link } from 'react-router-dom';
 
+//-----------------------------------
+// test code
+import courses from '../database/sample_course';
+import paths from '../database/sample_paths';
+import tags from '../database/sample_tags';
+//-----------------------------------
+
 const Course = () => {
     return ( 
         <>
@@ -15,32 +22,35 @@ const Course = () => {
             <GradientBackground customStyle={{paddingLeft:100}}>
             <Link  style={{textDecoration:'none'}} to="/seeall" state="paths"><HeadingButton text="Popular Paths" label="See All"/></Link>
             <div className='path-container'>
-                <Thumbnail 
-                customStyle={{width:300,height:250,marginRight:30,borderRadius:10}} 
-                label="Network Engineer"
-                image="https://www.cisco.com/c/dam/assets/swa/img/anchor-info/what-is-wan-new-628x353.png"/>
-                <Thumbnail 
-                customStyle={{width:300,height:250,borderRadius:10}}
-                label="Web Developement" 
-                image="https://content.techgig.com/photo/84794342/what-are-the-key-responsibilities-of-web-developers.jpg?49831"/>
+                {
+                    paths.map(path=><Thumbnail 
+                        key={path.id}
+                        customStyle={{width:300,height:250,marginRight:30,borderRadius:10}} 
+                        label={path.label}
+                        image={path.image}
+                    />)
+                }
             </div>
             </GradientBackground>
         </section>
         <section>
             <GradientBackground customStyle={{paddingLeft:100}}>
                 <div>
-                    <Link to="/seeall" state="courses"><HeadingButton text="Courses" label="See All"/></Link>
+                    <Link to="/seeall" style={{textDecoration:'none'}} state="courses"><HeadingButton text="Courses" label="See All"/></Link>
                     <div className='course-card-container'>
-                        <CourseCard  customStyle={{marginRight:30}}
-                        image = "https://www.uwl.ac.uk/sites/uwl/files/styles/16_by_9_960_x_540/public/2019-01/Cyber%20Security%20at%20UWL.jpg?itok=tiMI1eLa"
-                        heading="Cyber Security"
-                        description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eget ut at eu, quis pretium mauris. Aliquam a dignissim id erat lorem. Id tortor ac sit nisl magna odio curabitur non. Ac risus blandit."
-                        />
-                        <CourseCard 
-                        image = "https://elu.nl/wp-content/uploads/2020/12/1_SKjEotIqtQ3P0MrBLbncMg.jpg"
-                        heading="Software Engineering"
-                        description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eget ut at eu, quis pretium mauris. Aliquam a dignissim id erat lorem. Id tortor ac sit nisl magna odio curabitur non. Ac risus blandit."
-                        />
+                    
+                        {
+                            courses.map(course=><CourseCard 
+                                key={course.id} 
+                                id={course.id}
+                                customStyle={{marginRight:30}}
+                                image = {course.image}
+                                heading={course.title}
+                                description = {course.description}
+                                
+                                /> )
+                        }
+                        
                     </div>
                 </div>
             </GradientBackground>
@@ -49,12 +59,11 @@ const Course = () => {
             <GradientBackground customStyle={{paddingLeft:100}}>
                 <HeadingButton text="Tags" label="See All"/>
                 <div className='course-tag-container'>
-                <TagCard  height={60} label="Programming"/>
-                <TagCard  height={60} label="Dev OPS"/>
-                <TagCard height={60} label="Malware Developement"/>
-                </div>
-               
+                    {
+                        tags.map(tag=><TagCard marginRight={60} height={60} label={tag.label}/>)
+                    }
                 
+                </div>
             </GradientBackground>
             
         </section>
