@@ -9,9 +9,12 @@
     align-items: center;
     
 }
-.navbar-container h2{
-    color: white;
+.navbar-logo{
+    padding-top: 15px;
+    width:150px;
+    height:auto;
 }
+
 .navbar-container ul{
     padding: 0px;
     display: flex;

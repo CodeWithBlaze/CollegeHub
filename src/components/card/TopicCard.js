@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './topiccard.css';
-function TopicCard({customStyle,label="Some text",topic}) {
+function TopicCard({customStyle,topic,onClick,link}) {
     return (
         <div className='topic-card-container' style={customStyle}>
             <h4>{topic.label}</h4>
-            <Link to="/tutorial" state={topic} style={{textDecoration:'none',color:'#A4A4A4'}}><label>Preview</label></Link>
+            {link && <Link to={link} state={{initialTopic:topic,TopicList:[topic]}} style={{textDecoration:'none',color:'#A4A4A4'}}><label>Preview</label></Link>}
+            {onClick && <label onClick={()=>onClick(topic)}>Preview</label>}
         </div>
     );
 }

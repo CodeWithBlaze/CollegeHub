@@ -1,9 +1,9 @@
 import { useState } from "react";
 import TopicCard from "../components/card/TopicCard";
 import SearchBar from "../components/input/SearchBar";
-
 import Navbar from '../components/navbar/Navbar';
 import FilterCard from "../components/tags/FilterCard";
+
 import './topic.css';
 
 //----------------------------------------
@@ -11,7 +11,7 @@ import './topic.css';
 import topics from '../database/sample_topic';
 
 
-//----------------------------------------
+
 const customStyle = {width:100}
 const AUTHOR = 'author';
 const LANGUAGE = 'language'; 
@@ -33,7 +33,7 @@ const Topic = () => {
                 </div>
                  <div className="topic-container">
                      {
-                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"100%",height:60}}/>)
+                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"100%",height:60}} link='/tutorial'/>)
                      }
                 
                 </div>

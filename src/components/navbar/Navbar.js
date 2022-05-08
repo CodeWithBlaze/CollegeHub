@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import GradientButton from '../buttons/Gradient';
 import OutlineButton from '../buttons/Outline';
-
+import logo from '../../asset/logo.svg';
 import './navbar.css';
 
 const Navbar = ({bg_color='black'}) => {
     return ( 
         <div className="navbar-container" style={{backgroundColor:bg_color}}>
-            <Link to="/" style={{textDecoration:'none'}}><h2>CollegeHub</h2></Link>
+            <Link to="/" style={{textDecoration:'none'}}><img className='navbar-logo' src={logo}/></Link>
             <ul>
                 <Link to="/course" style={{textDecoration:'none'}}><li>Courses</li></Link>
                 <Link to="/topic" style={{textDecoration:'none'}}><li>Topic</li></Link>

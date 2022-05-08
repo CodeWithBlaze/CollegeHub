@@ -1,8 +1,11 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './course-curriculum.css';
+import {Link} from 'react-router-dom';
 import GradientBackground from '../backgrounds/GradientBackground';
 import GradientButton from '../buttons/Gradient';
+import TopicContext from '../../context/TopicContext';
 function CourseCurriculum({course_objective, course_outcome,course_title}) {
+    const topics = useContext(TopicContext);
     return (
         <GradientBackground>
             <div className='course-curriculum-sub-container'>
@@ -16,7 +19,7 @@ function CourseCurriculum({course_objective, course_outcome,course_title}) {
                         }
                     </ul>
                     <div className='course-curriculum-btn-container'>
-                        <GradientButton label="Enroll Now" width={180} height={60} borderRadius={5} fontsize={15} color="white"/>
+                    <Link to="/tutorial" state={{initialTopic:topics[0],TopicList:topics}}><GradientButton label="Enroll Now" width={180} height={60} borderRadius={5} fontsize={15} color="white"/></Link>
                     </div>
                 </div>
                 <div className='course-outcome'>

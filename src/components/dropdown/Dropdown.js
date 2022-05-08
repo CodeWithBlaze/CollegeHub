@@ -2,8 +2,7 @@ import { useState } from 'react';
 import SolidButton from '../buttons/Solid';
 import './dropdown.css';
 
-const syllabus = ["OSI vs Model","TCP/IP","Routers","Hub vs Switch","Fiber Cables"]
-const Dropdown = ({label}) => {
+const Dropdown = ({label,syllabus}) => {
     const [isOpen,setIsOpen] = useState(false);
     return (
         <div className={`dropdown_common ${isOpen?"dropdown_open":"dropdown_close"}`} onClick={()=>setIsOpen(!isOpen)} >

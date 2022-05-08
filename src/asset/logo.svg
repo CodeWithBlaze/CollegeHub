@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="955.128" height="375.322" viewBox="0 0 955.128 375.322">
+  <g id="Layer_2" data-name="Layer 2" transform="translate(0 -0.55)">
+    <g id="Layer_1" data-name="Layer 1" transform="translate(0 0.55)">
+      <path id="Path_1" data-name="Path 1" d="M118.31,99.135l19.63-48.819A144.412,144.412,0,0,1,259.706,49.2q11.191,25.81,22.431,51.62c-3.3-4.351-31.694-40.38-81.353-40.957S121.672,94.9,118.31,99.135Z" transform="translate(76.684 22.614)" fill="#8700ef"/>
+      <path id="Path_2" data-name="Path 2" d="M71,73.481,230.872.55,389.656,72.921l-75.173,37.595L298.216,71.8a127.288,127.288,0,0,0-134.094-2.242q-8.406,20.734-16.828,41.517Z" transform="translate(46.02 -0.55)" fill="#8700ef"/>
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="91.325" cy="101.56" rx="91.325" ry="101.56" transform="translate(184.561 89.199)" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="75.436" cy="83.875" rx="75.436" ry="83.875" transform="translate(200.911 108.532)" fill-opacity="0.8" stroke="#231f20" stroke-miterlimit="10" stroke-width="1"/>
+      <text id="C" transform="translate(0 256.019)" fill="#fff" font-size="189" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">C</tspan></text>
+      <text id="LLEGE" transform="translate(393.614 248.434)" fill="#fff" font-size="164" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">LLEGE</tspan></text>
+      <text id="Hub" transform="translate(756.128 354.322)" fill="#fff" font-size="100" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">Hub</tspan></text>
+    </g>
+  </g>
+</svg>

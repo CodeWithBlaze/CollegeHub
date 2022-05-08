@@ -14,7 +14,7 @@ const ReviewCard = ({image,name}) => {
                         <ReactStars 
                         isHalf={true}
                         count={5}
-                        onChange={()=>console.log("Chnaged")}
+                        onChange={()=>console.log("Changed")}
                         size={18}
                         activeColor="#ffd700"
                         />

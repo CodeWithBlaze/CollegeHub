@@ -1,12 +1,13 @@
 import {useState } from 'react';
+import PracticeCard from '../card/PracticeCard';
 import './tabcomponent.css';
 
 const jdoodle_link = "https://www.jdoodle.com/iembed/v0/";
 const Resources=({description})=>{
-    return <p>{description}</p>
+    return <p className='tab-description'>{description}</p>
 }
-const Practice=()=>{
-    return <h1>Practice</h1>
+const Practice=({topic})=>{
+    return <PracticeCard currentTopic={topic}/>
 }
 const AuthorCode=({links,activeLink,setActiveLink})=>{
     return (
@@ -17,7 +18,7 @@ const AuthorCode=({links,activeLink,setActiveLink})=>{
     )
 }
 const Test=()=>{
-    return <h1>Test</h1>
+    return <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2Ofi1fwghZmZxw98aCGMareMwXCp0ztu9pK-abidoCtxO_w/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 }
 const getTabComponent=(tab,activeLink,setActiveLink,topic)=>{
     if(tab === 0)
@@ -28,7 +29,7 @@ const getTabComponent=(tab,activeLink,setActiveLink,topic)=>{
     }
         
     else if(tab === 2)
-        return <Practice/>
+        return <Practice topic={topic}/>
     else
         return <Test/>
 }

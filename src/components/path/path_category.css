@@ -1,0 +1,18 @@
+.path-category-container h1{
+    font-weight:600;
+    font-size: 35px;
+    color:white;
+}
+.path-category-container p{
+    font-weight: 500;
+    color:#A4A4A4;
+    line-height:30px;
+    max-width: 95%;
+}
+.path-courses{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}

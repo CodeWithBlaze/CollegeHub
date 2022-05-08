@@ -1,0 +1,21 @@
+.sidebar{
+    /* width:30%; */
+    height:100vh;
+    background-color:#0E1525;
+    border:2px solid black;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:8888;
+    overflow-y:auto;
+    animation: slidein 1s forwards;
+    padding:15px;
+}
+@keyframes slidein {
+    from{
+        width:0%;
+    }
+    to{
+        width: 30%;
+    }
+}

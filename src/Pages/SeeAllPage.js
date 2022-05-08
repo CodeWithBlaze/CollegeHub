@@ -1,10 +1,10 @@
 import React from 'react';
 import CourseCard from '../components/card/CourseCard';
 import Navbar from '../components/navbar/Navbar';
-import './see_all.css';
 import {useLocation} from 'react-router-dom';
-import { useState } from 'react';
 import Thumbnail from '../components/Thumbnails/Thumbnail';
+import './see_all.css';
+
 const ShowCourses = ()=>{
         return  <CourseCard 
         image = "https://elu.nl/wp-content/uploads/2020/12/1_SKjEotIqtQ3P0MrBLbncMg.jpg"
@@ -18,11 +18,8 @@ const ShowPaths = () =>{
     label="Network Engineer"
     image="https://www.cisco.com/c/dam/assets/swa/img/anchor-info/what-is-wan-new-628x353.png"/>
 }
-function SeeAllPage(props) {
-    
-    const [data,setDate] = useState(null);
+function SeeAllPage() {
     const location = useLocation();
-    console.log(location.state)
     return (
        <>
         <Navbar bg_color='transparent'/>

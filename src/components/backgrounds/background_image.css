@@ -1,4 +1,4 @@
-.course-deatils-container{
+.course-details-container{
     width: 100%;
     min-width:100vh;
     height:fit-content;
@@ -9,7 +9,7 @@
     height: 500px;
     overflow-y: hidden;
 }
-.course-deatils-container img{
+.course-details-container img{
     width: 100%;
     height: auto;
 }
