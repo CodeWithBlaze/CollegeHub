@@ -11,4 +11,5 @@ export const SIGNIN_ROUTE = '/signin';
 export const SEEALL_ROUTE = '/seeall'; 
 export const COURSE_DETAILS_ROUTE = '/coursedetails';
 export const PATH_DETAILS_ROUTE = '/pathdetails'; 
+export const PROFILE_ROUTE = '/profile';
 export const HOME_ROUTE = '/'; 

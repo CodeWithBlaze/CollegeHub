@@ -9,6 +9,7 @@ import './topic.css';
 //----------------------------------------
 // test code
 import topics from '../database/sample_topic';
+import { TUTORIAL_ROUTE } from "../config/CONFIG";
 
 
 
@@ -33,7 +34,7 @@ const Topic = () => {
                 </div>
                  <div className="topic-container">
                      {
-                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"100%",height:60}} link='/tutorial'/>)
+                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"100%",height:60}} link={TUTORIAL_ROUTE}/>)
                      }
                 
                 </div>

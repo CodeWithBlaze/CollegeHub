@@ -34,3 +34,8 @@
 .navbar-container ul li:hover{
     color:#8826D1;
 }
+.profile-user-email{
+    color:white;
+    margin-right: 20px;
+    cursor: pointer;
+}

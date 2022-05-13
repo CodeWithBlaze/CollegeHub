@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserAuthContext from "../../context/UserAuthContext";
 import GradientButton from "../buttons/Gradient";
 import InputBox from "../input/InputBox";
 import LinkText from "../text/LinkText";
@@ -16,6 +17,7 @@ const input_box_style = {
 const Signin = ({setShowSignUpPage}) => {
     const [password,setPassword] = useState("");
     const [email,setEmail] = useState("");
+    const {setAuth} = useContext(UserAuthContext);
     return ( 
         <Card width={400} height={600}>
                         <h3 className='card-text-signup'>
@@ -46,7 +48,7 @@ const Signin = ({setShowSignUpPage}) => {
                             fontsize={16}
                             color="white"
                             borderRadius={3}
-                            
+                            onClick={()=>setAuth({email:'sagniksaha20013@gmail.com'})}
                             />
                             <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setShowSignUpPage(true)}>
                                 Create a new Account.<label style={{color:'#8826D1'}}> Sign up</label>

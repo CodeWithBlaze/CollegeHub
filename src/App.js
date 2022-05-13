@@ -8,6 +8,7 @@ import Signup from './Pages/Signup';
 import SeeAllPage from './Pages/SeeAllPage';
 import CourseDetails from './Pages/CourseDetails';
 import PathDetails from './Pages/pathDetails';
+import Profile from './Pages/Profile';
 import {CONTACT_ROUTE,
         COURSE_DETAILS_ROUTE,
         COURSE_ROUTE, HOME_ROUTE, 
@@ -15,11 +16,16 @@ import {CONTACT_ROUTE,
         SEEALL_ROUTE, 
         SIGNIN_ROUTE, 
         SIGNUP_ROUTE, 
-        TOPIC_ROUTE, 
+        TOPIC_ROUTE,
+        PROFILE_ROUTE, 
         TUTORIAL_ROUTE} from './config/CONFIG';
+import UserAuthContext from './context/UserAuthContext';
+import { useState } from 'react';
 
 function App() {
+  const [auth,setAuth] = useState(null);
   return (
+    <UserAuthContext.Provider value={{auth,setAuth}}>
     <Routes>
       <Route exact path={COURSE_ROUTE} element={<Course/>}/>
       <Route exact path={TOPIC_ROUTE} element={<Topic/>}/>
@@ -28,10 +34,12 @@ function App() {
       <Route exact path={SIGNUP_ROUTE}  element={<Signup showSignUp={true} key="signup"/>}/>
       <Route exact path={SIGNIN_ROUTE}  element={<Signup showSignUp={false}key="signin"/>}/>
       <Route exact path={SEEALL_ROUTE}  element={<SeeAllPage/>}/>
+      <Route exact path={PROFILE_ROUTE}  element={<Profile/>}/>
       <Route exact path={COURSE_DETAILS_ROUTE}  element={<CourseDetails/>}/>
       <Route exact path={PATH_DETAILS_ROUTE}  element={<PathDetails/>}/>
       <Route exact path={HOME_ROUTE}     element={<Home/>} />
     </Routes>
+    </UserAuthContext.Provider>
   );
 }
 

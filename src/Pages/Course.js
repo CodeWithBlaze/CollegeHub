@@ -10,7 +10,7 @@ const Course = () => {
     return ( 
         <>
         <Navbar bg_color='transparent'/>
-        <section style={{marginTop:70}}>
+        <section style={{paddingTop:100}}>
             <ItemContainer LinkTo="/seeall" DataToPass="paths" title="Popular Paths">
                 <Paths/>
             </ItemContainer>

@@ -1,0 +1,24 @@
+.Profile-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:fit-content;
+}
+.profile-courses-enrolled{
+    width: 95%;
+    padding-left: 30px;
+}
+.profile-heading-text{
+    font-weight: 500;
+    color:white;
+    margin-bottom: 50px;
+}
+.profile-course-enrolled-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-details{
+    width: 50%;
+    
+    
+}
