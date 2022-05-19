@@ -7,4 +7,5 @@
 .heading_button_container h1{
     font-weight: 500;
     margin-right:30px;
+    font-family: var(--primary-font);
 }

@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="955.128" height="375.322" viewBox="0 0 955.128 375.322">
-  <g id="Layer_2" data-name="Layer 2" transform="translate(0 -0.55)">
-    <g id="Layer_1" data-name="Layer 1" transform="translate(0 0.55)">
-      <path id="Path_1" data-name="Path 1" d="M118.31,99.135l19.63-48.819A144.412,144.412,0,0,1,259.706,49.2q11.191,25.81,22.431,51.62c-3.3-4.351-31.694-40.38-81.353-40.957S121.672,94.9,118.31,99.135Z" transform="translate(76.684 22.614)" fill="#8700ef"/>
-      <path id="Path_2" data-name="Path 2" d="M71,73.481,230.872.55,389.656,72.921l-75.173,37.595L298.216,71.8a127.288,127.288,0,0,0-134.094-2.242q-8.406,20.734-16.828,41.517Z" transform="translate(46.02 -0.55)" fill="#8700ef"/>
-      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="91.325" cy="101.56" rx="91.325" ry="101.56" transform="translate(184.561 89.199)" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1"/>
-      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="75.436" cy="83.875" rx="75.436" ry="83.875" transform="translate(200.911 108.532)" fill-opacity="0.8" stroke="#231f20" stroke-miterlimit="10" stroke-width="1"/>
-      <text id="C" transform="translate(0 256.019)" fill="#fff" font-size="189" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">C</tspan></text>
-      <text id="LLEGE" transform="translate(393.614 248.434)" fill="#fff" font-size="164" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">LLEGE</tspan></text>
-      <text id="Hub" transform="translate(756.128 354.322)" fill="#fff" font-size="100" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">Hub</tspan></text>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="862.17" height="737.588" viewBox="0 0 862.17 737.588">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ec9f05"/>
+      <stop offset="1" stop-color="#ff4e00"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff4e00"/>
+      <stop offset="1" stop-color="#ec9f05"/>
+    </linearGradient>
+  </defs>
+  <g id="file" transform="translate(0 0.028)">
+    <path id="Path_1" data-name="Path 1" d="M20,150.108,405.7,7.184A44.692,44.692,0,0,1,433.377.1a43.473,43.473,0,0,1,20,6.907L831.407,146.948c19.141,5.056,31.33,19.321,30.743,33.045a27.627,27.627,0,0,1-7.674,16.884l-46.9,16.929q2.167,147.168,4.243,294.29h-53V233.082L462.585,343.729a61.4,61.4,0,0,1-20.766,6.907,63.607,63.607,0,0,1-36.882-6.139L13.046,195.839A25.19,25.19,0,0,1,0,173.9a25.506,25.506,0,0,1,20-23.791Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    <path id="Path_2" data-name="Path 2" d="M52.553,68.63a455.948,455.948,0,0,0-16.7,85.231c-2.663,30.652,2.031,25.777-.993,46.182a39.275,39.275,0,0,0,2.3,24.558A24.558,24.558,0,0,0,47.181,235.39a28.576,28.576,0,0,0,20.721.767c27.989-7.223,62.524-18.554,66.857-20a198.271,198.271,0,0,1,56.113-2.3,207.976,207.976,0,0,1,110.647,47.672,25.6,25.6,0,0,0,16.116,2.3,22.934,22.934,0,0,0,10.744-6.185c13.949-13.137,53.9-32.277,76.112-39.184,19.412-6,34.9-5.733,52.231-5.372,70.6,1.445,104.417,35.3,124.46,20,6.771-5.146,13.949-17.425,8.487-51.509a332.265,332.265,0,0,0-3.837-55.3A328.465,328.465,0,0,0,571.7,70.3L336.686,157.788a85.366,85.366,0,0,1-53.044-.767Z" transform="translate(118.992 241.286)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_3" data-name="Path 3" d="M157.6,244.731,157.19,325l148.973.813q.406-40.178.767-80.31c1.986-78.008-45.414-129.517-78.73-128.343C195.788,118.329,153.849,170.7,157.6,244.731Z" transform="translate(552.42 411.752)" fill="url(#linear-gradient-3)"/>
   </g>
 </svg>

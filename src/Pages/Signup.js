@@ -3,7 +3,7 @@ import './signup.css';
 import SignUp from '../components/card/Signup';
 import Signin from '../components/card/Signin';
 import { useState } from 'react';
-
+import SetToastContainer from '../components/toast/Toast';
 
 const Signup = ({showSignUp=true}) => {
     const [showSignUpPage,setShowSignUpPage] = useState(showSignUp);
@@ -20,7 +20,7 @@ const Signup = ({showSignUp=true}) => {
                     {showSignUpPage && <SignUp  setShowSignUpPage={setShowSignUpPage}/>}
                     {!showSignUpPage && <Signin  setShowSignUpPage={setShowSignUpPage}/>}
                 </div>
-
+                <SetToastContainer/>
             </div>
         </div>
      );

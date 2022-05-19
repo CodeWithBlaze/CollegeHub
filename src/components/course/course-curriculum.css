@@ -4,6 +4,8 @@
 }
 .course-curriculum-sub-container h1{
     font-size: 50px;
+    font-family: var(--primary-font);
+    font-weight: 500;
 }
 .course-learn-outcome-container{
     width: 100%;
@@ -14,35 +16,37 @@
 .course-learning{
     width: 50%;
     height:fit-content;
-    /* background-color: red; */
     padding: 30px;
+    padding-left: 60px;
     border-right: 2px solid #787777;
 }
 .course-learning h2{
     font-size: 30px;
+    font-family: var(--primary-font);
     font-weight: 500;
 }
 .course-outcome{
     width:50%;
     flex-grow: 1;
-    /* background-color: blue; */
     padding: 30px;
     padding-left: 100px;
 }
 .course-outcome h2{
     font-size: 30px;
+    font-family: var(--primary-font);
     font-weight: 500;
 }
 .course-curriculum-list{
     margin-top: 50px;
     text-decoration: none;
     list-style: none;
+    font-family: var(--secondary-font);
 }
 .course-curriculum-list li{
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 18px;
-    color:#767678;
+    color:var(--color-light-gray-shade);
 }
 .course-curriculum-btn-container{
     margin-top: 100px;

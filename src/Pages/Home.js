@@ -3,20 +3,22 @@ import Navbar from "../components/navbar/Navbar";
 import SiteInfoContainer from "../components/containers/SiteInfoContainer";
 import { HOMEPAGEVIDEO } from "../config/HOMEPAGE_HARDCODED";
 import Socials from "../components/containers/Socials";
-import Reviews from "../components/containers/Reviews";
-import AvailableCourses from "../components/containers/AvailableCourses";
-import IdeologyCard from "../components/containers/IdeologyCard";
+import PathContainer from "../components/containers/PathContainer";
+import DevelopementCourseContainer from "../components/containers/DevelopementCourseContainer";
+import LatestCourseContainer from "../components/containers/LatestCourseContainer";
+import AnimatedFillButton from "../components/buttons/AnimatedFillButton";
+import HeadingText from "../components/Headings/HeadingText";
 
 import './home.css';
 
 const Home = () => {
     return (
         <>
-        <Navbar bg_color="transparent"/>
+        <Navbar bg_color="#2A2E35"/>
         <div className="container">
             <div className="title-container">
-                <h1>Get Entire College Study For Free</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</p>
+                <h1>College Study For Free</h1>
+                <p>CollegeHub is a completely free education platform focused particularly on practical skill developement that are required across the industries. All the courses and lessons are absolutely free and are taught by the best teachers</p>
                 <GradientButton 
                 label="Get Everything For Free" 
                 width={260} 
@@ -35,18 +37,32 @@ const Home = () => {
                     <source src={HOMEPAGEVIDEO} type="video/mp4"/>
                 </video>
             </div>
+            
         </div>
         <section style={{marginTop:30}}>
-            <IdeologyCard/>
+            <LatestCourseContainer/>
         </section>
         <section style={{marginTop:30}}>
-            <AvailableCourses/>
+            <DevelopementCourseContainer/>
         </section>
-        <section className="user-review-container">
-            <Reviews/>
+        <section>
+            <PathContainer/>
         </section>
-        <section style={{marginTop:30}}>
+        <section>
             <SiteInfoContainer/>
+        </section>
+        <section>
+        <HeadingText label="MULTIPLE LEARNING FORMAT" 
+            subheading="LEARN IN YOUR OWN WAY"
+            customContainerStyle={{width:'100%'}} 
+            customTextStyle={{textAlign:'center'}}
+            customSubheadingStyle={{textAlign:'center'}}
+            />
+            <div className="home-courses-component-container">
+                <AnimatedFillButton label="FULL COURSE" customStyle={{width:160,height:60}} color="purple"/>
+                <AnimatedFillButton label="QUICK LESSON" customStyle={{width:160,height:60}} color="green"/>
+                <AnimatedFillButton label="COMPLETE PATH" customStyle={{width:160,height:60}} color="blue"/>
+            </div>
         </section>
         <section className="footer">
             <Socials/>

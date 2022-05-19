@@ -2,8 +2,11 @@ import { useContext, useState } from "react";
 import UserAuthContext from "../../context/UserAuthContext";
 import GradientButton from "../buttons/Gradient";
 import InputBox from "../input/InputBox";
+import Loader from "../loaders/Loader";
 import LinkText from "../text/LinkText";
 import Card from "./Card";
+import {signInUser} from '../../firebase/functions/auth';
+import { getSuccessToast,getErrorToast } from "../toast/Toast";
 
 const input_box_style = {
     width:'90%',
@@ -17,7 +20,20 @@ const input_box_style = {
 const Signin = ({setShowSignUpPage}) => {
     const [password,setPassword] = useState("");
     const [email,setEmail] = useState("");
+    const [showLoader,setShowLoader] = useState(false);
     const {setAuth} = useContext(UserAuthContext);
+
+    function onSignInSuccess(userCredential){
+        setShowLoader(false);
+        console.log(userCredential);
+        getSuccessToast("SignIn Successfull","BOTTOM_RIGHT")
+        setAuth({email:userCredential.user.email})
+    }
+    function onSignInFail(error){
+        setShowLoader(false);
+        console.log(error.message);
+        getErrorToast("SignIn Failed","BOTTOM_RIGHT");
+    }
     return ( 
         <Card width={400} height={600}>
                         <h3 className='card-text-signup'>
@@ -41,6 +57,7 @@ const Signin = ({setShowSignUpPage}) => {
                         />
                         </div>
                         <div className='signup-form-button-container'>
+                            {showLoader && <Loader width={30} height={30} color="blue"/>}
                             <GradientButton 
                             label="Sign in" 
                             width={326}
@@ -48,7 +65,7 @@ const Signin = ({setShowSignUpPage}) => {
                             fontsize={16}
                             color="white"
                             borderRadius={3}
-                            onClick={()=>setAuth({email:'sagniksaha20013@gmail.com'})}
+                            onClick={()=>{setShowLoader(true);signInUser(email,password,onSignInSuccess,onSignInFail)}}
                             />
                             <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setShowSignUpPage(true)}>
                                 Create a new Account.<label style={{color:'#8826D1'}}> Sign up</label>

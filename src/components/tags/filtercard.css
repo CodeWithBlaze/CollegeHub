@@ -6,7 +6,8 @@
     height: fit-content;
     padding: 15px;
     background-color:rgba(83,83,83,0.5);
-    color:#8D8D8D;
+    color:var(--color-light-gray-shade);
+    font-family: var(--secondary-font);
     border-radius: 5px;
     font-size: 14px;
 }

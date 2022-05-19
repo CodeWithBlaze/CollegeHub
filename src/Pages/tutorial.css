@@ -19,7 +19,7 @@
     display: block;
     width: 150px;
     height:40px;
-    font-family: 'IBM Plex Sans';
+    font-family: var(--secondary-font);
     background-color: #3756F4;
     color:white;
     border:none;

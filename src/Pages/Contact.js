@@ -1,8 +1,7 @@
-import Dropdown from "../components/dropdown/Dropdown";
 
 const Contact = () => {
     return ( 
-        <Dropdown label="Networking"/>
+        <h1>Hello World</h1>
      );
 }
  

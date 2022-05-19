@@ -1,29 +1,33 @@
 import './course.css';
 import Navbar from '../components/navbar/Navbar';
-import Paths from '../components/path/Paths';
+import AnimatedFillButton from '../components/buttons/AnimatedFillButton';
 import Courses from '../components/course/Courses';
-import Tags from '../components/tags/Tags';
-import ItemContainer from '../components/containers/ItemContainer';
-
+import Paths from '../components/path/Paths';
+import { useState } from 'react';
 
 const Course = () => {
+    const [active,setActive] = useState(0);
     return ( 
         <>
-        <Navbar bg_color='transparent'/>
-        <section style={{paddingTop:100}}>
-            <ItemContainer LinkTo="/seeall" DataToPass="paths" title="Popular Paths">
-                <Paths/>
-            </ItemContainer>
-        </section>
+        <Navbar bg_color='#2A2E35'/>
         <section>
-            <ItemContainer LinkTo="/seeall" DataToPass="courses" title="Popular Courses">
-                <Courses/>
-            </ItemContainer>
-        </section>
-        <section>
-            <ItemContainer LinkTo="/seeall" DataToPass="tags" title="Popular Tags">
-                <Tags/>
-            </ItemContainer>
+            <div className='course-buttons'>
+                <AnimatedFillButton 
+                label="COURSES" 
+                customStyle={{width:160,height:60}}
+                active={active === 0}
+                onClick={()=>setActive(0)} 
+                color="green"/>
+                <AnimatedFillButton 
+                label="PATHS" 
+                customStyle={{width:160,height:60}}
+                active={active === 1} 
+                onClick={()=>setActive(1)} 
+                color="blue"/>
+            </div>
+            <div className='course-path-container'>
+               {active === 0 ? <Courses/>:<Paths/>}
+            </div>
         </section>
         </>
      );

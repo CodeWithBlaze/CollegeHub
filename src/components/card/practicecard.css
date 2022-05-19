@@ -9,7 +9,7 @@
 }
 .practice-card-container p{
     font-size: 15px;
-    font-family: 'IBM Plex Sans';
+    font-family:var(--secondary-font);
     font-weight: 500;
     line-height:22px;
     padding: 10px;

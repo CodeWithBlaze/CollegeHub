@@ -9,5 +9,5 @@
     font-size: 16px;
     margin-left:10px;
     font-weight: 500;
-    font-family:'IBM Plex Sans';
+    font-family:var(--secondary-font);
 }

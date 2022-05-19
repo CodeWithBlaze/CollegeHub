@@ -21,10 +21,10 @@ const Topic = () => {
     const [activeSearch,setActiveSearch] = useState(TITLE);
     return (
         <>
-        <Navbar bg_color="transparent"/>
+        <Navbar bg_color="#2A2E35"/>
         <div className="topic-page-layout">
                <div className="topic-filter">
-                <SearchBar placeholder={`Search by ${activeSearch}`} customStyle={{width:'100%',height:50,backgroundColor:'rgba(83,83,83,0.5)',color:'#8D8D8D'}}/>
+                <SearchBar placeholder={`search by ${activeSearch}`} customStyle={{width:'100%',height:50,backgroundColor:'rgba(83,83,83,0.5)',color:'#8D8D8D'}}/>
                 <div className="filter-card-container">
                     <FilterCard label="Language" active={activeSearch===LANGUAGE}   onClick={()=>setActiveSearch(LANGUAGE)} customStyle={customStyle}/>
                     <FilterCard label="Author"   active={activeSearch===AUTHOR}     onClick={()=>setActiveSearch(AUTHOR)} customStyle={customStyle}/>

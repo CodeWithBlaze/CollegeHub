@@ -1,18 +1,27 @@
 import React from 'react';
-import { site_info_card } from '../../config/HOMEPAGE_HARDCODED';
-import GradientBackground from '../backgrounds/GradientBackground';
-import ImageInfo from '../card/ImageInfo';
+import HeadingText from '../Headings/HeadingText';
+import topics from '../../database/sample_topic';
+import TopicCard from '../card/TopicCard';
+import { TUTORIAL_ROUTE } from '../../config/CONFIG';
 
 function SiteInfoContainer() {
     return (
-        <GradientBackground>
-                {
-                    site_info_card.map(info=><ImageInfo heading={info.heading} 
-                                                        description={info.description}
-                                                        image={info.image}
-                                                        />)
-                }
-        </GradientBackground>
+        <div>
+            <HeadingText label="Extraordinary Topics" 
+            subheading="LEARN ALGORITHMS,NETWORKING AND MUCH MORE"
+            customContainerStyle={{width:'100%'}} 
+            customTextStyle={{textAlign:'center'}}
+            customSubheadingStyle={{textAlign:'center'}}
+            />
+            <div className='home-topic-container'>
+            
+                     {
+                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"50%",height:60}} link={TUTORIAL_ROUTE}/>)
+                     }
+                
+                
+            </div>
+        </div>
     );
 }
 

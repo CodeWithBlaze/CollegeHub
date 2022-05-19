@@ -1,9 +1,0 @@
-.see-all-container{
-    background: linear-gradient(90deg, #323338 -0.9%, #212226 98.06%);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 180px;
-}

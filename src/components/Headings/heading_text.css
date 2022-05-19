@@ -1,0 +1,10 @@
+.heading-text-label{
+    color:white;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 40px;
+}
+.subheading-text-label{
+    color:var(--color-light-gray-shade);
+    font-family: var(--secondary-font);    
+}

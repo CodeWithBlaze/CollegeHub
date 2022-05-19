@@ -5,15 +5,14 @@ import Course from "./Pages/Course";
 import Contact from "./Pages/Contact";
 import TutorialPage from './Pages/Tutorial';
 import Signup from './Pages/Signup';
-import SeeAllPage from './Pages/SeeAllPage';
 import CourseDetails from './Pages/CourseDetails';
 import PathDetails from './Pages/pathDetails';
 import Profile from './Pages/Profile';
+
 import {CONTACT_ROUTE,
         COURSE_DETAILS_ROUTE,
         COURSE_ROUTE, HOME_ROUTE, 
         PATH_DETAILS_ROUTE, 
-        SEEALL_ROUTE, 
         SIGNIN_ROUTE, 
         SIGNUP_ROUTE, 
         TOPIC_ROUTE,
@@ -33,7 +32,6 @@ function App() {
       <Route exact path={TUTORIAL_ROUTE} element={<TutorialPage/>}/>
       <Route exact path={SIGNUP_ROUTE}  element={<Signup showSignUp={true} key="signup"/>}/>
       <Route exact path={SIGNIN_ROUTE}  element={<Signup showSignUp={false}key="signin"/>}/>
-      <Route exact path={SEEALL_ROUTE}  element={<SeeAllPage/>}/>
       <Route exact path={PROFILE_ROUTE}  element={<Profile/>}/>
       <Route exact path={COURSE_DETAILS_ROUTE}  element={<CourseDetails/>}/>
       <Route exact path={PATH_DETAILS_ROUTE}  element={<PathDetails/>}/>

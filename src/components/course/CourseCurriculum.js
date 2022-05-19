@@ -16,7 +16,7 @@ function CourseCurriculum({course_objective, course_outcome,course_title}) {
                     <h2>What you will learn</h2>
                     <ul className='course-curriculum-list'>
                         {
-                            course_objective.map(objective=><li key={objective}>{objective}</li>)
+                            course_objective.map(objective=><li key={objective}>🔥 {objective}</li>)
                         }
                     </ul>
                     <div className='course-curriculum-btn-container'>
@@ -27,7 +27,7 @@ function CourseCurriculum({course_objective, course_outcome,course_title}) {
                     <h2>Course Outcome</h2>
                     <ul className='course-curriculum-list'>
                         {
-                            course_outcome.map(outcome=><li key={outcome}>{outcome}</li>)
+                            course_outcome.map(outcome=><li key={outcome}>✨ {outcome}</li>)
                         }
                     </ul>
                 </div>

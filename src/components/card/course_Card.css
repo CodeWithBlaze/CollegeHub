@@ -3,7 +3,7 @@
     min-height:460px;
     height:fit-content;
     padding-bottom: 15px;
-    background-color:#161616;
+    background-color:var(--color-gray-shade);
     border-radius: 5px;
     overflow: hidden;
     font-family: 'IBM Plex Sans';
@@ -35,14 +35,16 @@
     font-weight: 500;
     height:120px;
     overflow: hidden;
-    color:#767678;
-    line-height: 22x;
+    color:var(--color-light-gray-shade);
+    font-family: var(--secondary-font);
+    line-height: 20px;
 }
 .course-card-details div h3{
     color:white;
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 0px;
-    height:80px;
+    height:60px;
     overflow: hidden;
+    font-family: var(--primary-font);
 }
