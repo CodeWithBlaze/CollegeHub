@@ -10,10 +10,9 @@ import './navbar.css';
 
 const Navbar = ({bg_color='black'}) => {
     const {auth,setAuth} = useContext(UserAuthContext);
-    console.log(auth);
     return ( 
         <div className="navbar-container" style={{backgroundColor:bg_color}}>
-            <Link to={HOME_ROUTE} style={{textDecoration:'none'}}><img className='navbar-logo' src={logo}/></Link>
+            <Link to={HOME_ROUTE} style={{textDecoration:'none'}}><img className='navbar-logo' src={logo} alt="logo"/></Link>
             <ul>
                 <Link to={COURSE_ROUTE} style={{textDecoration:'none'}}><li>Courses</li></Link>
                 <Link to={TOPIC_ROUTE} style={{textDecoration:'none'}}><li>Topic</li></Link>

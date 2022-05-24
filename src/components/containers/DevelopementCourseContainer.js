@@ -4,7 +4,8 @@ import Courses from '../course/Courses';
 import HeadingText from '../Headings/HeadingText';
 
 
-function DevelopementCourseContainer(props) {
+function DevelopementCourseContainer({beginner_courses}) {
+    
     return (
     <GradientBackground>
         <HeadingText label="NEW TO DEVELOPEMENT" 
@@ -14,7 +15,7 @@ function DevelopementCourseContainer(props) {
             customSubheadingStyle={{textAlign:'center'}}
         />
         <div className='home-courses-component-container'>
-            <Courses/>
+            <Courses courses={beginner_courses}/>
         </div>
     </GradientBackground>
     );

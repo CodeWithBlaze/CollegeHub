@@ -3,7 +3,7 @@ import {useState} from 'react';
 const InputBox = ({placeholder,type,customStyle,value,setValue}) => {
     const [showPassword,setShowPassword] = useState(false);
     function getType(){
-        if(type=='password' && !showPassword)
+        if(type==='password' && !showPassword)
             return "password"
         return "text"
     }
@@ -19,7 +19,7 @@ const InputBox = ({placeholder,type,customStyle,value,setValue}) => {
             className="input-box"/>
             <br/>
             {
-                type == "password" && 
+                type === "password" && 
                 <i className={showPassword?"fa-solid fa-eye-slash":"fa-solid fa-eye password-eye-icon"}
                 onClick={()=>setShowPassword(!showPassword)} 
                 style={{

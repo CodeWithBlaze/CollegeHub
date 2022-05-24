@@ -7,7 +7,7 @@ const CourseCard = ({image,heading,description,customStyle,id}) => {
     return ( 
         <div className='course-card-main' style={customStyle}>
             <div className='course-card-details'>
-                <img src={image}/>
+                <img src={image} alt="card"/>
                 <div>
                     <h3>{heading}</h3>
                     <p>{description}</p>

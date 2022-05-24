@@ -9,7 +9,7 @@ import BackgroundImage from '../components/backgrounds/BackgroundImage';
 
 function CourseDetails(props) {
     const location = useLocation()
-    const {course_objective,course_outcome,topics} = getCourseTopicById(location.state.id);
+    const {course_objective,course_outcome,topics} = getCourseTopicById(1);
     
     return (
         <BackgroundImage image={location.state.image}>

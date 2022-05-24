@@ -18,7 +18,7 @@ const AuthorCode=({links,activeLink,setActiveLink})=>{
     )
 }
 const Test=()=>{
-    return <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2Ofi1fwghZmZxw98aCGMareMwXCp0ztu9pK-abidoCtxO_w/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    return <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2Ofi1fwghZmZxw98aCGMareMwXCp0ztu9pK-abidoCtxO_w/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0" title='test-document'>Loading…</iframe>
 }
 const getTabComponent=(tab,activeLink,setActiveLink,topic)=>{
     if(tab === 0)

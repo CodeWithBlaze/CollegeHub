@@ -1,10 +1,9 @@
 import React from 'react';
 import HeadingText from '../Headings/HeadingText';
-import topics from '../../database/sample_topic';
 import TopicCard from '../card/TopicCard';
 import { TUTORIAL_ROUTE } from '../../config/CONFIG';
 
-function SiteInfoContainer() {
+function SiteInfoContainer({topics}) {
     return (
         <div>
             <HeadingText label="Extraordinary Topics" 
@@ -16,7 +15,7 @@ function SiteInfoContainer() {
             <div className='home-topic-container'>
             
                      {
-                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"50%",height:60}} link={TUTORIAL_ROUTE}/>)
+                        topics.map(topic=><TopicCard key={topic._id} topic={topic} customStyle={{width:"50%",height:60}} link={TUTORIAL_ROUTE}/>)
                      }
                 
                 

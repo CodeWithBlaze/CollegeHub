@@ -9,7 +9,7 @@ function BackgroundImage(props) {
         <Navbar bg_color='rgba(0, 0, 0, 0.48)'/>
         <div className='course-details-container'>
             <div className='course-details-image-container'>
-                 <img src={props.image}/>
+                 <img src={props.image} alt="Backgorund"/>
             </div>
             {props.children}
         </div>

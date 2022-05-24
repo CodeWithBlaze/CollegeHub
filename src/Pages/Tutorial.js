@@ -28,11 +28,11 @@ const TutorialPage = () => {
         <Navbar bg_color='transparent'/>
         <div className='tutorial-container'>
             <section className='editor-container'>
-            <iframe title='code' frameborder="0" width="100%" style={{height:"100%",borderRadius:5,border:'2px solid black',display:isWhiteBoard?'none':'flex'}} src="https://replit.com/@SagnikSaha4/JavaProgram?lite=true"></iframe>
+            <iframe title='code' frameBorder="0" width="100%" style={{height:"100%",borderRadius:5,border:'2px solid black',display:isWhiteBoard?'none':'flex'}} src="https://replit.com/@SagnikSaha4/JavaProgram?lite=true"></iframe>
             <iframe title='notion' src={`${NOTION_EMBED}/${currentTopic.notion}`} style={{display:isWhiteBoard?'flex':'none',width:'100%',height:'100%',borderRadius:5,border:'2px solid black',}}></iframe>
             </section>
             <section className='video-container'>
-            <iframe   width="100%" height="390" style={{border:'2px solid black'}} src={`${YOUTUBE_EMBED}/${currentTopic.link}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+            <iframe   width="100%" height="390" style={{border:'2px solid black'}} src={`${YOUTUBE_EMBED}/${currentTopic.link}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="allowfullscreen"></iframe>
             <TabComponent topic={currentTopic}/>
             </section>
         </div>

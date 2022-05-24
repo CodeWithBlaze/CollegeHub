@@ -9,9 +9,17 @@ import LatestCourseContainer from "../components/containers/LatestCourseContaine
 import AnimatedFillButton from "../components/buttons/AnimatedFillButton";
 import HeadingText from "../components/Headings/HeadingText";
 
-import './home.css';
 
+import './home.css';
+import useCourses from "../hooks/useCourses";
+import usePaths from "../hooks/usePaths";
+import useCategoryCourse from '../hooks/useCatgeoryCourse';
+import useTopics from "../hooks/useTopics";
 const Home = () => {
+    const {courses} = useCourses(3);
+    const {paths} = usePaths(3);
+    const {coursesCategory} = useCategoryCourse(3,'','Beginner');
+    const {topics} = useTopics(5);
     return (
         <>
         <Navbar bg_color="#2A2E35"/>
@@ -40,16 +48,16 @@ const Home = () => {
             
         </div>
         <section style={{marginTop:30}}>
-            <LatestCourseContainer/>
+            <LatestCourseContainer latest_courses={courses}/>
         </section>
         <section style={{marginTop:30}}>
-            <DevelopementCourseContainer/>
+            <DevelopementCourseContainer beginner_courses={coursesCategory}/>
         </section>
         <section>
-            <PathContainer/>
+            <PathContainer paths={paths}/>
         </section>
         <section>
-            <SiteInfoContainer/>
+            <SiteInfoContainer topics={topics}/>
         </section>
         <section>
         <HeadingText label="MULTIPLE LEARNING FORMAT" 

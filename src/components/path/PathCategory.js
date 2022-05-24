@@ -10,23 +10,22 @@ function PathCategory({category}) {
     function getCoursesById(id){
         return courses.find(course=>course.id === id)
     }
-    function setCourseArray(){
-        const Pathcourses = []
-        category.courses.forEach(courseId => {
-            const course = getCoursesById(courseId)
-            Pathcourses.push(course); 
-        });
-        setCurrentCourses(Pathcourses);
-    }
     useEffect(()=>{
+        function setCourseArray(){
+            const Pathcourses = []
+            category.courses.forEach(courseId => {
+                const course = getCoursesById(courseId)
+                Pathcourses.push(course); 
+            });
+            setCurrentCourses(Pathcourses);
+        }
         setCourseArray();
-        
     },[])
     //------------test code ------------
     return (
         <div className='path-category-container'>
              <h1>{category.title}</h1>
-             <p>{category.description}</p>
+             <p className='path-category-description'>{category.description}</p>
              <div className='path-courses'>
                         {
                             currentCourses.map(course=><CourseCard 

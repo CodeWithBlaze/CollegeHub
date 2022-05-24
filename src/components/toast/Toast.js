@@ -24,5 +24,5 @@ function getInfoToast(message,position){
 function SetToastContainer(){
     return <ToastContainer/>
 }
-export default ToastContainer;
+export default SetToastContainer;
 export {getErrorToast,getInfoToast,getSuccessToast,getWarningToast};

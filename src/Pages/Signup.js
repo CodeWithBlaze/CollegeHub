@@ -14,7 +14,7 @@ const Signup = ({showSignUp=true}) => {
             <div className="signup-container">
                 <div className='signup-text-container'>
                     <h2>Everything is free <br/>forever .</h2>
-                    <img src={require('../asset/education.png')}/>
+                    <img src={require('../asset/education.png')} alt="Graduation"/>
                 </div>
                 <div className='signup-form'>
                     {showSignUpPage && <SignUp  setShowSignUpPage={setShowSignUpPage}/>}

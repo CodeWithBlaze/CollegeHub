@@ -3,7 +3,7 @@ import GradientBackground from '../backgrounds/GradientBackground';
 import HeadingText from '../Headings/HeadingText';
 import Paths from '../path/Paths';
 
-function PathContainer(props) {
+function PathContainer({paths}) {
     return (
         <GradientBackground>
             <HeadingText label="POPULAR PATHS" 
@@ -13,7 +13,7 @@ function PathContainer(props) {
             customSubheadingStyle={{textAlign:'center'}}
             />
             <div className='home-courses-component-container'>
-                <Paths/>
+                <Paths paths={paths}/>
             </div>
         </GradientBackground>
     );

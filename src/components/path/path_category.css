@@ -1,13 +1,21 @@
 .path-category-container h1{
-    font-weight:600;
+    font-weight:500;
     font-size: 35px;
     color:white;
+    font-family: var(--primary-font);
+    text-align: center;
 }
 .path-category-container p{
     font-weight: 500;
-    color:#A4A4A4;
+    color:var(--color-light-gray-shade);
+    font-family: var(--secondary-font);
     line-height:30px;
-    max-width: 95%;
+
+}
+.path-category-description{
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 .path-courses{
     margin-top: 30px;

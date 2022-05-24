@@ -4,9 +4,13 @@ import AnimatedFillButton from '../components/buttons/AnimatedFillButton';
 import Courses from '../components/course/Courses';
 import Paths from '../components/path/Paths';
 import { useState } from 'react';
+import useCourses from '../hooks/useCourses';
+import usePaths from '../hooks/usePaths';
 
 const Course = () => {
     const [active,setActive] = useState(0);
+    const {courses} = useCourses();
+    const {paths} = usePaths();
     return ( 
         <>
         <Navbar bg_color='#2A2E35'/>
@@ -26,7 +30,7 @@ const Course = () => {
                 color="blue"/>
             </div>
             <div className='course-path-container'>
-               {active === 0 ? <Courses/>:<Paths/>}
+               {active === 0 ? <Courses courses={courses}/>:<Paths paths={paths}/>}
             </div>
         </section>
         </>
