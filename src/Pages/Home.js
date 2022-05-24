@@ -8,19 +8,32 @@ import DevelopementCourseContainer from "../components/containers/DevelopementCo
 import LatestCourseContainer from "../components/containers/LatestCourseContainer";
 import AnimatedFillButton from "../components/buttons/AnimatedFillButton";
 import HeadingText from "../components/Headings/HeadingText";
-
+import {READ_BEGINNER_COURSE_URL,READ_COURSE_URL,READ_PATH_URL,READ_TOPIC_URL} from '../config/CONFIG';
 
 import './home.css';
-import useCourses from "../hooks/useCourses";
-import usePaths from "../hooks/usePaths";
-import useCategoryCourse from '../hooks/useCatgeoryCourse';
-import useTopics from "../hooks/useTopics";
+import FetchData from "../hooks/useFetchData";
+import { useEffect, useState } from "react";
+
+const COURSE_LIMIT = 3;
+const PATH_LIMIT = 3;
+const TOPIC_LIMIT = 5;
+const BEGINNER_COURSE_LIMIT = 3;
+
 const Home = () => {
-    const {courses} = useCourses(3);
-    const {paths} = usePaths(3);
-    const {coursesCategory} = useCategoryCourse(3,'','Beginner');
-    const {topics} = useTopics(5);
-    return (
+        const [courses,setCourses] = useState([]);
+        const [paths,setPaths] = useState([])
+        const [coursesCategory,setCoursesCatgory] = useState([])
+        const [topics,setTopics] = useState([]);
+        useEffect(()=>{
+            function getData(){
+                FetchData(READ_COURSE_URL,COURSE_LIMIT,'',courses,setCourses);
+                FetchData(READ_PATH_URL,PATH_LIMIT,'',paths,setPaths);
+                FetchData(READ_BEGINNER_COURSE_URL,BEGINNER_COURSE_LIMIT,'',coursesCategory,setCoursesCatgory);
+                FetchData(READ_TOPIC_URL,TOPIC_LIMIT,'',topics,setTopics);
+            }
+            getData();
+        },[])
+        return (
         <>
         <Navbar bg_color="#2A2E35"/>
         <div className="container">
