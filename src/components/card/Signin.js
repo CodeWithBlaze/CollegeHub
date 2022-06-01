@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import UserAuthContext from "../../context/UserAuthContext";
+import { useState } from "react";
 import GradientButton from "../buttons/Gradient";
 import InputBox from "../input/InputBox";
 import Loader from "../loaders/Loader";
@@ -21,18 +20,14 @@ const Signin = ({setShowSignUpPage}) => {
     const [password,setPassword] = useState("");
     const [email,setEmail] = useState("");
     const [showLoader,setShowLoader] = useState(false);
-    const {setAuth} = useContext(UserAuthContext);
-
+    
     function onSignInSuccess(userCredential){
         setShowLoader(false);
-        console.log(userCredential);
         getSuccessToast("SignIn Successfull","BOTTOM_RIGHT")
-        setAuth({email:userCredential.user.email})
     }
     function onSignInFail(error){
         setShowLoader(false);
-        console.log(error.message);
-        getErrorToast("SignIn Failed","BOTTOM_RIGHT");
+        getErrorToast(error.message,"BOTTOM_RIGHT");
     }
     return ( 
         <Card width={400} height={600}>

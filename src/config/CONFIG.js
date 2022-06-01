@@ -19,4 +19,5 @@ export const READ_COURSE_URL = 'http://localhost:5000/course'
 export const READ_PATH_URL = 'http://localhost:5000/path'
 export const READ_TOPIC_URL = 'http://localhost:5000/topic'
 export const READ_BEGINNER_COURSE_URL = 'http://localhost:5000/course/Beginner'
-
+//-------------tokens--------------------------
+export const USER_TOKEN_KEY = 'collegeHubUser@AccessToken'

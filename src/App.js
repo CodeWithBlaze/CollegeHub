@@ -17,15 +17,23 @@ import {CONTACT_ROUTE,
         SIGNUP_ROUTE, 
         TOPIC_ROUTE,
         PROFILE_ROUTE, 
-        TUTORIAL_ROUTE} from './config/CONFIG';
+        TUTORIAL_ROUTE,
+        } from './config/CONFIG';
 import UserAuthContext from './context/UserAuthContext';
-import {useState } from 'react';
+import {useEffect, useState } from 'react';
+import { updateAuthState } from './firebase/functions/auth';
 
 
 
 function App() {
   const [auth,setAuth] = useState(null);
-  
+  useEffect(()=>{
+      updateAuthState(setAuth);
+      if(auth){
+        
+      }
+        
+  },[])
   return (
     <UserAuthContext.Provider value={{auth,setAuth}}>
     <Routes>

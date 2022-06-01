@@ -7,7 +7,6 @@ import SetToastContainer from '../components/toast/Toast';
 
 const Signup = ({showSignUp=true}) => {
     const [showSignUpPage,setShowSignUpPage] = useState(showSignUp);
-    console.log(showSignUpPage);
     return ( 
         <div className="signup-container">
             <Navbar bg_color='transparent'/>

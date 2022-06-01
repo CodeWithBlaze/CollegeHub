@@ -6,7 +6,7 @@ import Paths from '../components/path/Paths';
 import { useState,useEffect } from 'react';
 import FetchData from '../hooks/useFetchData';
 import LoadMoreButton from '../components/buttons/LoadMoreButton';
-import { READ_COURSE_URL,READ_TOPIC_URL } from '../config/CONFIG';
+import { READ_COURSE_URL,READ_PATH_URL } from '../config/CONFIG';
 
 const COURSE_LIMIT = '';
 const PATH_LIMIT = '';
@@ -21,7 +21,7 @@ const Course = () => {
             setLastCourseID(last_course_id);
     }
     async function fetchPaths(){
-        const last_path_id = await FetchData(READ_TOPIC_URL,PATH_LIMIT,lastPathID,paths,setPaths);
+        const last_path_id = await FetchData(READ_PATH_URL,PATH_LIMIT,lastPathID,paths,setPaths);
         setPathCourseID(last_path_id);
     }
     useEffect(()=>{

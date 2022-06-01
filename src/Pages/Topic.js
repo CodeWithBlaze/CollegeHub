@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TopicCard from "../components/card/TopicCard";
 import SearchBar from "../components/input/SearchBar";
 import Navbar from '../components/navbar/Navbar';
@@ -6,19 +6,27 @@ import FilterCard from "../components/tags/FilterCard";
 
 import './topic.css';
 
-//----------------------------------------
-// test code
-import topics from '../database/sample_topic';
-import { TUTORIAL_ROUTE } from "../config/CONFIG";
-
+import { READ_TOPIC_URL, TUTORIAL_ROUTE } from "../config/CONFIG";
+import FetchData from '../hooks/useFetchData';
 
 
 const customStyle = {width:100}
 const AUTHOR = 'author';
 const LANGUAGE = 'language'; 
 const TITLE = 'title'; 
+const TOPIC_LIMIT = '';
 const Topic = () => {
     const [activeSearch,setActiveSearch] = useState(TITLE);
+    const [topics,setTopics] = useState([]);
+    const [lastTopicId,setLastTopicId] = useState('')
+    useEffect(()=>{
+        async function getTopics(){
+            const last_topic_id = await FetchData(READ_TOPIC_URL,TOPIC_LIMIT,'',lastTopicId,setTopics);
+            setLastTopicId(last_topic_id);
+        }
+        getTopics();
+        console.log(localStorage)
+    },[])
     return (
         <>
         <Navbar bg_color="#2A2E35"/>
@@ -34,7 +42,7 @@ const Topic = () => {
                 </div>
                  <div className="topic-container">
                      {
-                        topics.map(topic=><TopicCard key={topic.id} topic={topic} customStyle={{width:"100%",height:60}} link={TUTORIAL_ROUTE}/>)
+                        topics.map(topic=><TopicCard key={topic._id} topic={topic} customStyle={{width:"100%",height:60}} link={TUTORIAL_ROUTE}/>)
                      }
                 
                 </div>

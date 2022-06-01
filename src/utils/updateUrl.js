@@ -5,6 +5,5 @@ export default function updateURL(url,limit,lastId){
         url+=`?lastId=${lastId}`;
     else if(limit)
         url+=`?limit=${limit}`;
-    console.log(url)
     return url 
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { registerUser } from "../../firebase/functions/auth";
+import setNewUser from "../../hooks/setNewUser";
 import GradientButton from "../buttons/Gradient";
 import InputBox from "../input/InputBox";
 import Loader from "../loaders/Loader";
@@ -23,8 +24,11 @@ const Signup = ({setShowSignUpPage}) => {
     const [showLoader,setShowLoader] = useState(false);
 
     function onSignUpSucess(userCredential){
-        setShowLoader(false);
-        getSuccessToast("Sign up Successfull","BOTTOM_RIGHT")
+        setNewUser(name,userCredential.user.uid).then(()=>{
+            setShowLoader(false);
+            getSuccessToast("Sign up Successfull","BOTTOM_RIGHT")
+        })
+        .catch(err=>console.log(err))
     }
     function onSignUpFailed(error){
         setShowLoader(false);
