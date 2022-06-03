@@ -10,7 +10,7 @@ import { READ_COURSE_URL,READ_PATH_URL } from '../config/CONFIG';
 
 const COURSE_LIMIT = '';
 const PATH_LIMIT = '';
-const Course = () => {
+const Course = ({userProgress}) => {
     const [active,setActive] = useState(0);
     const [courses,setCourses] = useState([]);
     const [paths,setPaths] = useState([]);
@@ -49,7 +49,7 @@ const Course = () => {
                 color="blue"/>
             </div>
             <div className='course-path-container'>
-               {active === 0 ? <Courses courses={courses}/>:<Paths paths={paths}/>}
+               {active === 0 ? <Courses courses={courses} userProgress={userProgress}/>:<Paths paths={paths}/>}
             </div>
             {active === 0 && <LoadMoreButton label="Load More"  onClick={()=>fetchCourse()} hasNext={lastCourseID?true:false}/>}
             {active === 1 && <LoadMoreButton label="Load More"  onClick={()=>fetchPaths()} hasNext={lastPathID?true:false}/>}

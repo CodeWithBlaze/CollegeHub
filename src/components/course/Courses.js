@@ -1,11 +1,12 @@
 import React from 'react';
 import CourseCard from '../card/CourseCard';
-function Courses({courses=[]}) {
+function Courses({courses=[],userProgress=[]}) {
     return (
         <div className='course-card-container'>
                     
                         {
-                            courses.map(course=><CourseCard 
+                            courses.map(course=><CourseCard
+                                isUserEnrolled={userProgress.includes(course._id)} 
                                 key={course._id} 
                                 id={course._id}
                                 customStyle={{marginRight:30,marginBottom:30}}

@@ -1,5 +1,7 @@
 import firebase_app from '../config';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onIdTokenChanged,signOut } from "firebase/auth";
+import { getUserProgress } from '../../hooks/useUserProgress';
+
 const auth = getAuth(firebase_app);
 function registerUser(email,password,onSignUpSuccess,onSignUpFailed){
     createUserWithEmailAndPassword(auth, email, password)
@@ -14,17 +16,21 @@ function signInUser(email,password,onSignInSuccess,onSignInFailed){
 function signOutUser(){
     signOut(auth)
 }
-function updateAuthState(setUpdatedAuth){
+
+function updateAuthState(setUpdatedAuth,setUserProgress){
     onIdTokenChanged(auth,function(user){
         if(user){
             user.getIdToken().then((token)=>{
                 const {uid,email} = user;
-                setUpdatedAuth({uid:uid,email:email,accessToken:token}) 
+                setUpdatedAuth({uid:uid,email:email,accessToken:token})
+                getUserProgress(setUserProgress); 
             })
         }
         else
             setUpdatedAuth(null);
     })
 }
-
-export {registerUser,signInUser,signOutUser,updateAuthState};
+function getAuthState(){
+    return auth.currentUser;
+}
+export {registerUser,signInUser,signOutUser,updateAuthState,getAuthState};

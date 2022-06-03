@@ -19,7 +19,7 @@ const PATH_LIMIT = 3;
 const TOPIC_LIMIT = 5;
 const BEGINNER_COURSE_LIMIT = 3;
 
-const Home = () => {
+const Home = ({userProgress}) => {
         const [courses,setCourses] = useState([]);
         const [paths,setPaths] = useState([])
         const [coursesCategory,setCoursesCatgory] = useState([])
@@ -61,10 +61,10 @@ const Home = () => {
             
         </div>
         <section style={{marginTop:30}}>
-            <LatestCourseContainer latest_courses={courses}/>
+            <LatestCourseContainer latest_courses={courses} userProgress={userProgress}/>
         </section>
         <section style={{marginTop:30}}>
-            <DevelopementCourseContainer beginner_courses={coursesCategory}/>
+            <DevelopementCourseContainer beginner_courses={coursesCategory} userProgress={userProgress}/>
         </section>
         <section>
             <PathContainer paths={paths}/>

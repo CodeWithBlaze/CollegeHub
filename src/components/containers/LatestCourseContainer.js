@@ -3,7 +3,7 @@ import GradientBackground from '../backgrounds/GradientBackground';
 import Courses from '../course/Courses';
 import HeadingText from '../Headings/HeadingText';
 
-function LatestCourseContainer({latest_courses}) {
+function LatestCourseContainer({latest_courses,userProgress}) {
     
     return (
         <GradientBackground>
@@ -14,7 +14,7 @@ function LatestCourseContainer({latest_courses}) {
             customSubheadingStyle={{textAlign:'center'}}
             />
         <div className="home-courses-component-container">
-            <Courses courses={latest_courses}/>
+            <Courses courses={latest_courses} userProgress={userProgress}/>
         </div>
         
     </GradientBackground>

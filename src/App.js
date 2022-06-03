@@ -27,17 +27,14 @@ import { updateAuthState } from './firebase/functions/auth';
 
 function App() {
   const [auth,setAuth] = useState(null);
+  const [userProgress,setUserProgress] = useState([]);
   useEffect(()=>{
-      updateAuthState(setAuth);
-      if(auth){
-        
-      }
-        
+      updateAuthState(setAuth,setUserProgress);
   },[])
   return (
     <UserAuthContext.Provider value={{auth,setAuth}}>
     <Routes>
-      <Route exact path={COURSE_ROUTE} element={<Course/>}/>
+      <Route exact path={COURSE_ROUTE} element={<Course userProgress={userProgress}/>}/>
       <Route exact path={TOPIC_ROUTE} element={<Topic/>}/>
       <Route exact path={CONTACT_ROUTE} element={<Contact/>}/>
       <Route exact path={TUTORIAL_ROUTE} element={<TutorialPage/>}/>
@@ -46,7 +43,7 @@ function App() {
       <Route exact path={PROFILE_ROUTE}  element={<Profile/>}/>
       <Route exact path={COURSE_DETAILS_ROUTE}  element={<CourseDetails/>}/>
       <Route exact path={PATH_DETAILS_ROUTE}  element={<PathDetails/>}/>
-      <Route exact path={HOME_ROUTE}     element={<Home/>} />
+      <Route exact path={HOME_ROUTE}     element={<Home userProgress={userProgress}/>} />
     </Routes>
     </UserAuthContext.Provider>
   );

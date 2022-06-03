@@ -1,6 +1,6 @@
 import topics from "./sample_topic"
 const courseTopic = {
-    1:{
+    '628b5326482cd7ad3bd8b97a':{
         course_topics:[1,3,5],
         course_objective:['Hub, Switch, Routers','OSI model, TCP/IP model','Packert Tracers by Cisco'],
         course_outcome:['Hub, Switch, Routers','OSI model, TCP/IP model','Packert Tracers by Cisco']

@@ -3,7 +3,6 @@ import Navbar from '../navbar/Navbar';
 
 import './background_image.css';
 function BackgroundImage(props) {
-    console.log(props.image);
     return (
         <>
         <Navbar bg_color='rgba(0, 0, 0, 0.48)'/>
