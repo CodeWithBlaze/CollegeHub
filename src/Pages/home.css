@@ -69,4 +69,23 @@
         flex-direction: column;
         align-items: center;
     }
+    .container{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .title-container{
+        width: 100%;
+        padding-left: 0px;
+        align-items: center;
+    }
+    .title-container h1{
+        width: 100%;
+        text-align: center;
+    }
+    .title-container p{
+        width: 100%;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }  
 }
