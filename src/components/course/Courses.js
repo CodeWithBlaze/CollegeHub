@@ -9,7 +9,6 @@ function Courses({courses=[],userProgress=[]}) {
                                 isUserEnrolled={userProgress.includes(course._id)} 
                                 key={course._id} 
                                 id={course._id}
-                                customStyle={{marginRight:30,marginBottom:30}}
                                 image = {course.image}
                                 heading={course.title}
                                 description = {course.description}

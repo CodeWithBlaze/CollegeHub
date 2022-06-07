@@ -3,7 +3,7 @@ import GradientButton from '../buttons/Gradient';
 import OutlineButton from '../buttons/Outline';
 import logo from '../../asset/logo.svg';
 import UserAuthContext from '../../context/UserAuthContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CONTACT_ROUTE, COURSE_ROUTE, HOME_ROUTE, PROFILE_ROUTE, SIGNIN_ROUTE, SIGNUP_ROUTE, TOPIC_ROUTE } from '../../config/CONFIG';
 
 import './navbar.css';
@@ -11,11 +11,19 @@ import { signOutUser } from '../../firebase/functions/auth';
 
 const Navbar = ({bg_color='black'}) => {
     const {auth} = useContext(UserAuthContext);
-    
-    return ( 
-        <div className="navbar-container" style={{backgroundColor:bg_color}}>
+    const [active,setActive]=useState(false);
+    useEffect(()=>{
+        window.addEventListener('resize',(e)=>{
+            if(window.innerWidth > 920)
+                setActive(false);
+        })
+    },[])
+    return (
+        <>
+        <div className={active?'res-navbar-menu-container':'navbar-container'} style={{backgroundColor:bg_color}}>
             <Link to={HOME_ROUTE} style={{textDecoration:'none'}}><img className='navbar-logo' src={logo} alt="logo"/></Link>
-            <ul>
+            <i className="fa-solid fa-bars fa-2xl hamburger-menu" onClick={()=>setActive(!active)}></i>
+            <ul className='navbar-menu-container'>
                 <Link to={COURSE_ROUTE} style={{textDecoration:'none'}}><li>Courses</li></Link>
                 <Link to={TOPIC_ROUTE} style={{textDecoration:'none'}}><li>Topic</li></Link>
                 <Link to={CONTACT_ROUTE} style={{textDecoration:'none'}}><li>Contact</li></Link>
@@ -26,8 +34,9 @@ const Navbar = ({bg_color='black'}) => {
                 {auth && <Link style={{textDecoration:'none'}} to={PROFILE_ROUTE}><label className='profile-user-email'>{auth.email}</label></Link>}
                 {auth && <GradientButton label="Log Out" width={130} height={40} color="white" fontsize={15} onClick={()=>signOutUser()}/>}
             </span>
-           
         </div>
+        </> 
+        
      );
 }
  

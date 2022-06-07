@@ -9,3 +9,8 @@
 .btn-outline:hover{
     background-color: var(--secondary-color);
 }
+@media screen and (max-width: 920px){
+    .btn-outline{
+        margin-right: 0px;
+    }
+}

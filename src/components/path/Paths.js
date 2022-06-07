@@ -7,7 +7,7 @@ function Paths({paths=[]}) {
                 {
                     paths.map(path=><Thumbnail 
                         key={path._id}
-                        customStyle={{width:300,height:250,marginRight:30,borderRadius:10}} 
+                        customStyle={{width:300,height:250,borderRadius:10}} 
                         label={path.label}
                         image={path.image}
                         categories={path.categories}
