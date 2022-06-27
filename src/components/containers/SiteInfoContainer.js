@@ -15,7 +15,7 @@ function SiteInfoContainer({topics}) {
             <div className='home-topic-container'>
             
                      {
-                        topics.map(topic=><TopicCard key={topic._id} topic={topic} customStyle={{width:"50%",height:60}} link={TUTORIAL_ROUTE}/>)
+                        topics.map(topic=><TopicCard key={topic._id} topic={topic} customStyle={{width:"50%"}} link={TUTORIAL_ROUTE}/>)
                      }
                 
                 

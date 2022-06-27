@@ -39,6 +39,10 @@
     flex-direction: column;
     justify-content: center;
 }
+.home-video{
+    width:680px; 
+    height:350px;
+}
 .home-courses-component-container{
     display: flex;
     flex-direction: row;
@@ -64,14 +68,13 @@
     margin-top: 60px;
     background-color: black;
 }
-@media screen and (max-width:780px) {
-    .home-courses-component-container{
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (max-width:1180px) {
     .container{
         flex-direction: column;
         height: fit-content;
+        padding-left: 150px;
+        padding-right:150px;
+        
     }
     .title-container{
         width: 100%;
@@ -85,7 +88,34 @@
     .title-container p{
         width: 100%;
         text-align: center;
-        padding-left: 100px;
-        padding-right: 100px;
-    }  
+    } 
+    .video-container{
+        flex-direction: row;
+        margin-top: 30px;
+        
+    }
+    .home-video{
+        width: 100%;
+        height: auto;
+    } 
+}
+@media screen and (max-width:780px) {
+    .home-courses-component-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        flex-direction: column;
+        height: fit-content;
+        padding-left: 90px;
+        padding-right: 90px;
+        
+    }
+    
+}
+@media screen and (max-width:630px) {
+    .container{
+        padding-left:30px;
+        padding-right:30px;
+    }
 }

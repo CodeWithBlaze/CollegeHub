@@ -23,3 +23,18 @@
 .topic-card-container label{
     cursor: pointer;
 }
+@media screen and (max-width:780px) {
+    .topic-card-container{
+        width: 85%!important;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    .topic-card-container h4{
+        white-space: normal;
+        text-align: center;
+        line-height: 25px;
+        max-width: 80%;
+    }
+}

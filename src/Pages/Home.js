@@ -49,8 +49,8 @@ const Home = ({userProgress}) => {
                 borderRadius={5}/>
             </div>
             <div className="video-container">
-                <video width={680} 
-                height={350} 
+                <video 
+                className="home-video" 
                 loop 
                 autoPlay={true} 
                 controls 

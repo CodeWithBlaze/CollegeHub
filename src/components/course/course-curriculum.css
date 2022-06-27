@@ -30,8 +30,10 @@
     flex-grow: 1;
     padding: 30px;
     padding-left: 100px;
+    
 }
 .course-outcome h2{
+    
     font-size: 30px;
     font-family: var(--primary-font);
     font-weight: 500;
@@ -50,4 +52,43 @@
 }
 .course-curriculum-btn-container{
     margin-top: 100px;
+}
+@media screen and (max-width:910px) {
+    .course-curriculum-sub-container{
+        padding: 0px;
+    }
+    .course-curriculum-sub-container h1{
+        text-align: center;
+    }
+    .course-learn-outcome-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .course-learning{
+        border:none;
+        width: 100%;
+        padding: 0px;
+        
+    }
+    .course-learning h2{
+        text-align: center;
+    }
+    .course-curriculum-list{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+    .course-curriculum-btn-container{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .course-outcome{
+        width: 100%;
+        margin-top: 30px;
+        padding: 0px;
+    }
+    .course-outcome h2{
+        text-align: center;
+    }
 }

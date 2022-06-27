@@ -1,5 +1,5 @@
 import firebase_app from '../config';
-import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onIdTokenChanged,signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword,onIdTokenChanged,signOut,sendEmailVerification } from "firebase/auth";
 import { getUserProgress } from '../../hooks/useUserProgress';
 
 const auth = getAuth(firebase_app);
@@ -26,8 +26,11 @@ function updateAuthState(setUpdatedAuth,setUserProgress){
                 getUserProgress(setUserProgress); 
             })
         }
-        else
+        else{
             setUpdatedAuth(null);
+            setUserProgress([])
+        }
+            
     })
 }
 function getAuthState(){

@@ -5,10 +5,10 @@ import { addUserTokenInHeader } from "./useUserToken";
 export default function getUserEnrolled(course_id){
     
     axios({
-        method:'put',
+        method:'PUT',
         url:UPDATE_ENROLL_IN_COURSE,
         headers:{
-            ...addUserTokenInHeader,
+            ...addUserTokenInHeader(),
         },
         data:{
             course_id:course_id

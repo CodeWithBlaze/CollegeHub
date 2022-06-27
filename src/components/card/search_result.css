@@ -1,0 +1,12 @@
+.search-result-card-container{
+    background-color: var(--color-light-gray-shade);
+    font-family: var(--secondary-font);
+    padding:10px;
+    padding-left: 20px;
+    padding-right:20px;
+    width: fit-content;
+    border-radius:3px;
+    font-size: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}

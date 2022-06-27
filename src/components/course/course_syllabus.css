@@ -23,3 +23,23 @@
     font-weight: 500;
     cursor: pointer;
 }
+@media screen and (max-width:910px){
+    .course-syllabus-container{
+        padding: 15px;
+    }
+    .course-syllabus-container h1{
+        text-align: center;
+    }
+    .load-more-btn{
+        flex-direction: column-reverse;
+    }
+    .course-curriculum-load-more{
+       margin-bottom: 30px;
+    }
+    .course-details-topic-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

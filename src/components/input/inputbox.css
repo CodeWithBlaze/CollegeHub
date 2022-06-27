@@ -1,3 +1,11 @@
+.search-bar-container{
+    position: relative;
+    width: 450px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .input-box{
     font-family:var(--secondary-font);
     font-weight: 500;
@@ -5,4 +13,15 @@
     border:none;
     border-radius: 5px;
     font-size: 16px;
+    width:100%;
+}
+.search-icon{
+    position: absolute;
+    right:15px;
+    color:#8D8D8D;
+}
+@media screen and (max-width:500px) {
+    .search-bar-container{
+        width: 90vw!important;
+    }
 }

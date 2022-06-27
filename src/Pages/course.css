@@ -20,3 +20,9 @@
     display: flex;
     justify-content: center;
 }
+.course-searchbar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

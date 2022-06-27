@@ -24,3 +24,18 @@
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
+@media screen and (max-width:780px) {
+    .path-category-container h1{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .path-category-description{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .path-courses{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}

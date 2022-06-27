@@ -10,10 +10,12 @@
     padding: 30px;
     padding-top: 0px;
 }
-.video-container{
+.tutorial-video-container{
     width: 50%;
     padding-right: 30px;
-    
+}
+.tutorial-video-container iframe{
+    aspect-ratio: 16/9;
 }
 .board-button{
     display: block;
@@ -34,4 +36,25 @@
     position:fixed;
     bottom:30px;
     left:0px;
+}
+@media screen and (max-width:780px) {
+    .tutorial-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .editor-container{
+        width: 100%;
+    }
+    .tutorial-video-container{
+        width: 100%;
+        padding-right:15px;
+        padding-left: 15px;
+    }
+    .editor-container iframe{
+        height:100vh !important;
+        padding-bottom: 30px;
+    }
+    .board-button-container{
+        bottom:2%;
+    }
 }

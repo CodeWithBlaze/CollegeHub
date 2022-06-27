@@ -14,8 +14,8 @@
 }
 .tabs label{
     display: flex;
-    flex:1;
     height: fit-content;
+    flex:1;
     justify-content: center;
     align-items: center;
     padding: 15px;
@@ -50,4 +50,10 @@
     color:#8D8D8D;
     font-family:var(--secondary-font);
     font-weight: 500;
+}
+@media screen and (max-width:780px) {
+    .tabs label{
+        font-size:12px;
+        height: 60px;
+    }
 }

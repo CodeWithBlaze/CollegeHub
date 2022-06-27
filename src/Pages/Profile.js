@@ -9,7 +9,7 @@ import GradientButton from '../components/buttons/Gradient';
 import './profile.css';
 
 const input_box_style = {
-    width:'75%',
+    width:'100%',
     height:50,
     backgroundColor:'rgba(83,83,83,0.5)',
     color:'#8D8D8D',
@@ -21,7 +21,7 @@ function Profile(props) {
     const [name,setName] = useState("");
     return (
         <>
-        <Navbar bg_color='transparent'/>
+        <Navbar bg_color='#2A2E35'/>
         <GradientBackground customStyle={{paddingTop:150}}>
             <div className='Profile-container'>
                 <div className='profile-courses-enrolled'>
@@ -31,7 +31,6 @@ function Profile(props) {
                             courses.map(course=><CourseCard 
                                 key={course.id} 
                                 id={course.id}
-                                customStyle={{marginRight:30,marginBottom:30}}
                                 image = {course.image}
                                 heading={course.title}
                                 description = {course.description}
@@ -58,7 +57,7 @@ function Profile(props) {
                     />
                     <GradientButton 
                             label="Update Details" 
-                            width={380}
+                            width={'100%'}
                             height={50} 
                             fontsize={16}
                             color="white"

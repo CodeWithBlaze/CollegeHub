@@ -7,6 +7,7 @@ import { useState,useEffect } from 'react';
 import FetchData from '../hooks/useFetchData';
 import LoadMoreButton from '../components/buttons/LoadMoreButton';
 import { READ_COURSE_URL,READ_PATH_URL } from '../config/CONFIG';
+import SearchBar from '../components/input/SearchBar';
 
 const COURSE_LIMIT = '';
 const PATH_LIMIT = '';
@@ -14,6 +15,7 @@ const Course = ({userProgress}) => {
     const [active,setActive] = useState(0);
     const [courses,setCourses] = useState([]);
     const [paths,setPaths] = useState([]);
+    const [search,setSearch] = useState('');
     const [lastCourseID,setLastCourseID] = useState('');
     const [lastPathID,setPathCourseID] = useState('');
     async function fetchCourse(){
@@ -48,6 +50,12 @@ const Course = ({userProgress}) => {
                 onClick={()=>setActive(1)} 
                 color="blue"/>
             </div>
+           <div className='course-searchbar-container'>
+           <SearchBar 
+            placeholder={"Search for Courses"} 
+            value={search} setValue={setSearch} 
+            customStyle={{height:50,backgroundColor:'rgba(83,83,83,0.5)',color:'#8D8D8D'}}/>
+           </div>
             <div className='course-path-container'>
                {active === 0 ? <Courses courses={courses} userProgress={userProgress}/>:<Paths paths={paths}/>}
             </div>

@@ -18,7 +18,26 @@
     flex-wrap: wrap;
 }
 .profile-details{
-    width: 50%;
-    
-    
+    width:50%;
+    padding-right:10%;
+}
+
+@media screen and (max-width:1130px){
+    .Profile-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .profile-heading-text{
+        text-align: center;
+    }
+    .profile-details{
+        width: 100%;
+        padding-left: 10%;
+    }
+    .profile-course-enrolled-container{
+        justify-content: center;
+    }
+    .profile-courses-enrolled{
+        padding-left: 0px;
+    }  
 }

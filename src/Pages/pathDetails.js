@@ -12,7 +12,7 @@ function PathDetails() {
             <div className='path-details-container'>
                 <h1 className='path-details-heading'>{label} Path</h1>
                 {
-                    categories.map(category=><PathCategory category={category}/>)
+                    categories.map(category=><PathCategory category={category} key={category._id}/>)
                 }
             </div>
         </BackgroundImage>        
