@@ -1,9 +1,11 @@
 import axios from "axios";
 import { UPDATE_ENROLL_IN_COURSE } from "../config/CONFIG";
+import { getAuthState } from "../firebase/functions/auth";
 import { addUserTokenInHeader } from "./useUserToken";
 
 export default function getUserEnrolled(course_id){
-    
+    if(!getAuthState())
+        return;
     axios({
         method:'PUT',
         url:UPDATE_ENROLL_IN_COURSE,

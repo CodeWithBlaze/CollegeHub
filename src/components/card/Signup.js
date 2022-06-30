@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { registerUser } from "../../firebase/functions/auth";
 import setNewUser from "../../hooks/setNewUser";
+import { extractErrorMessage } from "../../validation/validate";
 import GradientButton from "../buttons/Gradient";
 import InputBox from "../input/InputBox";
 import Loader from "../loaders/Loader";
@@ -32,8 +33,7 @@ const Signup = ({setShowSignUpPage}) => {
     }
     function onSignUpFailed(error){
         setShowLoader(false);
-        console.log(error.message);
-        getErrorToast("Sign In Failed","BOTTOM_RIGHT")
+        getErrorToast("Sign Up Failed: "+extractErrorMessage(error.message),"BOTTOM_RIGHT")
     }
     return ( 
         <Card width={400} height={600}>
@@ -68,12 +68,12 @@ const Signup = ({setShowSignUpPage}) => {
                             {showLoader && <Loader width={30} height={30} color="blue"/>}
                             <GradientButton 
                             label="Register Account" 
-                            width={326}
+                            width={'100%'}
                             height={50} 
                             fontsize={16}
                             color="white"
                             borderRadius={3}
-                            onClick={()=>{setShowLoader(true);registerUser(email,password,onSignUpSucess,onSignUpFailed)}}
+                            onClick={()=>{setShowLoader(true);registerUser(email,password,onSignUpSucess,onSignUpFailed,setShowLoader)}}
                             />
                             <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setShowSignUpPage(false)}>
                                 Already have a account.<label style={{color:'#8826D1'}}> Sign In.</label>

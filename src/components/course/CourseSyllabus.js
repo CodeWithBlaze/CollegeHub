@@ -18,7 +18,7 @@ function CourseSyllabus({course_id,topics,showTopics}) {
                     }
                 </div>
                 <div className='course-curriculum-btn-container load-more-btn'>
-                        <Link to={TUTORIAL_ROUTE} state={{topic_id:topics}}><GradientButton label="Enroll Now" width={180} height={60} borderRadius={5} fontsize={15} color="white" onClick={()=>getUserEnrolled(course_id)}/></Link>
+                        <Link to={TUTORIAL_ROUTE} state={{topic_id:topics,course_id}}><GradientButton label="Enroll Now" width={180} height={60} borderRadius={5} fontsize={15} color="white" onClick={()=>getUserEnrolled(course_id)}/></Link>
                         <label className='course-curriculum-load-more'>Load More</label>
                 </div>
             </div>

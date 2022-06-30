@@ -8,11 +8,11 @@ import SetToastContainer from '../components/toast/Toast';
 const Signup = ({showSignUp=true}) => {
     const [showSignUpPage,setShowSignUpPage] = useState(showSignUp);
     return ( 
-        <div className="signup-container">
-            <Navbar bg_color='transparent'/>
+        <div className="signup-main-container">
+            <Navbar bg_color='#2A2E35'/>
             <div className="signup-container">
                 <div className='signup-text-container'>
-                    <h2>Everything is free <br/>forever .</h2>
+                    <h2>Everything is free <br/>forever</h2>
                     <img src={require('../asset/education.png')} alt="Graduation"/>
                 </div>
                 <div className='signup-form'>

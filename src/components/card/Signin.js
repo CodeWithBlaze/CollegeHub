@@ -6,6 +6,7 @@ import LinkText from "../text/LinkText";
 import Card from "./Card";
 import {signInUser} from '../../firebase/functions/auth';
 import { getSuccessToast,getErrorToast } from "../toast/Toast";
+import { extractErrorMessage } from "../../validation/validate";
 
 const input_box_style = {
     width:'90%',
@@ -27,7 +28,7 @@ const Signin = ({setShowSignUpPage}) => {
     }
     function onSignInFail(error){
         setShowLoader(false);
-        getErrorToast(error.message,"BOTTOM_RIGHT");
+        getErrorToast("SignIn Failed: "+extractErrorMessage(error.message),"BOTTOM_RIGHT");
     }
     return ( 
         <Card width={400} height={600}>
@@ -55,12 +56,12 @@ const Signin = ({setShowSignUpPage}) => {
                             {showLoader && <Loader width={30} height={30} color="blue"/>}
                             <GradientButton 
                             label="Sign in" 
-                            width={326}
+                            width={'100%'}
                             height={50} 
                             fontsize={16}
                             color="white"
                             borderRadius={3}
-                            onClick={()=>{setShowLoader(true);signInUser(email,password,onSignInSuccess,onSignInFail)}}
+                            onClick={()=>{setShowLoader(true);signInUser(email,password,onSignInSuccess,onSignInFail,setShowLoader)}}
                             />
                             <LinkText customStyle={{fontSize:14,marginTop:20}} onClick={()=>setShowSignUpPage(true)}>
                                 Create a new Account.<label style={{color:'#8826D1'}}> Sign up</label>

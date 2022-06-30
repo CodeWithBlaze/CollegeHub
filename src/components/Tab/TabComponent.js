@@ -17,8 +17,8 @@ const AuthorCode=({links,activeLink,setActiveLink})=>{
     </>
     )
 }
-const Test=()=>{
-    return <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2Ofi1fwghZmZxw98aCGMareMwXCp0ztu9pK-abidoCtxO_w/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0" title='test-document'>Loading…</iframe>
+const Test=({topic})=>{
+    return <iframe src={`https://docs.google.com/forms/d/e/${topic.test_link}/viewform?embedded=true`} width="640" height="947" frameborder="0" marginheight="0" marginwidth="0" title='test-document'>Loading…</iframe>
 }
 const getTabComponent=(tab,activeLink,setActiveLink,topic)=>{
     if(tab === 0)
@@ -31,7 +31,7 @@ const getTabComponent=(tab,activeLink,setActiveLink,topic)=>{
     else if(tab === 2)
         return <Practice topic={topic}/>
     else
-        return <Test/>
+        return <Test topic={topic}/>
 }
 function loadScriptsForJDoodle(){
     const script = document.createElement('script');

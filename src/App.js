@@ -40,7 +40,7 @@ function App() {
       <Route exact path={TUTORIAL_ROUTE} element={<TutorialPage/>}/>
       <Route exact path={SIGNUP_ROUTE}  element={<Signup showSignUp={true} key="signup"/>}/>
       <Route exact path={SIGNIN_ROUTE}  element={<Signup showSignUp={false}key="signin"/>}/>
-      <Route exact path={PROFILE_ROUTE}  element={<Profile/>}/>
+      <Route exact path={PROFILE_ROUTE}  element={<Profile progress={userProgress}/>}/>
       <Route exact path={COURSE_DETAILS_ROUTE}  element={<CourseDetails/>}/>
       <Route exact path={PATH_DETAILS_ROUTE}  element={<PathDetails/>}/>
       <Route exact path={HOME_ROUTE}     element={<Home userProgress={userProgress}/>} />

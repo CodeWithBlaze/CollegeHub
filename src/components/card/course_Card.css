@@ -20,7 +20,7 @@
 }
 .course-card-details img{
     width: 100%;
-    max-height: 180px;
+    aspect-ratio: 16/9;
     overflow: hidden;
     object-fit:cover;
     
@@ -29,8 +29,8 @@
 .course-card-details div{
     padding-left: 20px;
     padding-right:20px;
-    
-    
+    height:280px;
+    overflow:hidden;
 }
 .course-card-details div p{
     margin-top: 8px;
@@ -44,7 +44,7 @@
 }
 .course-card-details div h3{
     color:white;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 0px;
     height:60px;

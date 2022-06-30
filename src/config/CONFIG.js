@@ -19,8 +19,11 @@ export const READ_COURSE_URL = 'http://localhost:5000/course'
 export const READ_PATH_URL = 'http://localhost:5000/path'
 export const READ_TOPIC_URL = 'http://localhost:5000/topic'
 export const SEARCH_TOPIC_URL = 'http://localhost:5000/topic/search'
+export const SEARCH_COURSE_URL = 'http://localhost:5000/course/search'
+export const SEARCH_PATH_URL = 'http://localhost:5000/path/search'
 export const READ_BEGINNER_COURSE_URL = 'http://localhost:5000/course/Beginner'
 export const READ_USER_PROGRESS_URL = 'http://localhost:5000/user/enrolled'
+export const READ_USER_TOPIC_PROGRESS = 'http://localhost:5000/user/progress'
 export const UPDATE_ENROLL_IN_COURSE = "http://localhost:5000/course/enroll"
 
 //-------------tokens--------------------------

@@ -1,0 +1,12 @@
+.solid-button{
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    font-family:var(--secondary-font);
+}
+@media screen and (max-width:480px) {
+    .solid-button{
+        margin-top: 5px;
+        width: 100% !important;
+    }
+}
